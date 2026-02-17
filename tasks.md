@@ -1,6 +1,6 @@
 # Task-List 
 
-# Phase 1
+# Program 1
 
 1) Make a program to print "Hello".
 2) Extract the string "Hello" in a variable.
@@ -9,7 +9,7 @@
 5) Add the key `class` and `age` to the dict.
 6) Make two prints to print the person's class first, then their age.
 
-# Phase 2 
+# Program 2 
 
 7) Make variable `people` being a list of names.
 8) Make a variable `peopleData` that contains keys for all elements of `people`, their values being another dict of `class` and `age`
@@ -19,7 +19,7 @@
 12) Re-assign `class` to be a different class.
 13) Assign a new name entry to the dict with it's own data. 
 
-# Phase 3 
+# Program 3 
 
 14) Make a variable `number` and assign it to 5 left-bitshift 2 and print it.
 15) Use the `-=` operator to decrement it by `number * 4` and print it.
@@ -29,13 +29,13 @@
 19) Divide `number` by `number` in a variable `number_3` and print it's type.
 20) Assign the values of all the numbers thus far to `0` and print them.
 
-# Phase 4 
+# Program 4 
 
 21) Make a variable `float_1` and assign it to `10.0`
 22) Use the `*=` operator to multiply it by `5`.
 23) Print the type of `float_1`.
 
-# Phase 5 
+# Program 5 
 
 24) Make a bool `is_old` and print  it's negation.
 25) Make two variables `name_1` and `name_2`, and print it's equality and in-equality.
