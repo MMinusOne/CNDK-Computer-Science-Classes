@@ -47,12 +47,17 @@
 1) What is the Python? 
 2) What are five charachteristics?
 3) Explain abstractions.
+4) What is a bool?
+5) What is a string? 
+6) Compare a float to an integer.
+
 
 # Previous Chapter: Computer Architecture
 
 1) What is an ALU?
 2) What is a CU? 
-3) What is base-10 and base-2? 
-4) What is primary memory? 
-5) What is secondary memory?
+3) What is a CPU? 
+4) What is base-10 and base-2? 
+5) What is primary memory? 
+6) What is secondary memory?
 
