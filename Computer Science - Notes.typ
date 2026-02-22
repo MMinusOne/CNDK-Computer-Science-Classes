@@ -30,7 +30,7 @@ This is all you need to ace the upcoming computer test, if you spend 30 minutes 
 
   grid.cell()[#pad(x: 1cm)[
       #figure(caption: "A physical CPU")[
-        #image("cpu.jfif", width: 3cm)]],
+        #image("./images/cpu.png", width: 3cm)]],
   ],
 )
 
@@ -81,7 +81,7 @@ This is all you need to ace the upcoming computer test, if you spend 30 minutes 
   ],
   grid.cell()[#pad(x: 1cm)[
       #figure(caption: "A physical stick of RAM")[
-        #image("ram.png", width: 5cm)]],
+        #image("./images/ram.png", width: 5cm)]],
   ],
 )
 
@@ -96,7 +96,7 @@ This is all you need to ace the upcoming computer test, if you spend 30 minutes 
   ],
   grid.cell()[#pad(x: 1cm)[
       #figure(caption: "An HDD")[
-        #image("hdd.jpg", height: 3cm)]
+        #image("./images/hdd.jpg", height: 3cm)]
     ]
   ],
 )
@@ -178,9 +178,8 @@ Numbers can be convertered to-and-back from base-2 to base-10.
     $(1001011)_2 = (2^0 + 2^1 + 2^3 + 2^6)_10 = (75)_10$
   ],
   grid.cell()[
-    #pad(left: 2cm)[#figure(caption: "The 1's and their indexes.")[#image(
-        "75-number-systems.png",
-      )] <The-1s-and-their-indexes>
+    #pad(left: 2cm)[#figure(caption: "The 1's and their indexes.")[
+        #image("./images/75-number-systems.png")] <The-1s-and-their-indexes>
     ]],
 )
 
@@ -196,10 +195,13 @@ Explanation of the three characteristics:
 #grid(
   columns: 2,
   grid.cell()[
-    #figure(caption: "Interpreted languages process.")[#image("interpreter.png", height: 4cm)] <Interpreted-Process>
+    #figure(caption: "Interpreted languages process.")[#image(
+      "./images/interpreter.png",
+      height: 4cm,
+    )] <Interpreted-Process>
   ],
   grid.cell()[
-    #figure(caption: "Compiled languages process.")[#image("compiler.png", height: 7cm)] <Compiled-Process>
+    #figure(caption: "Compiled languages process.")[#image("./images/compiler.png", height: 7cm)] <Compiled-Process>
   ],
 )
 
@@ -207,7 +209,7 @@ Explanation of the three characteristics:
     columns: 2,
     grid.cell()[Built on many lower-level "abstractions", "abstractions" in this context are harder programming languages, concepts and technologies that Python builds upon to provide an easy language.],
     grid.cell()[
-      #figure(caption: "Abstractions.")[#image("abstractions.png", height: 7cm)] <Abstractions>
+      #figure(caption: "Abstractions.")[#image("./images/abstractions.png", height: 7cm)] <Abstractions>
     ],
   )
 
@@ -355,7 +357,7 @@ Example:
     - Now we convert back to base-10, the number becomes: $2^0 = 1$.
   ],
   grid.cell()[
-    #figure(caption: "Right bitshift")[#image("right-bitshift.png")]
+    #figure(caption: "Right bitshift")[#image("./images/right-bitshift.png")]
   ],
 )
 
