@@ -400,8 +400,46 @@ example:
 - `int("2")` will be `2`.
 - `int(5)` will still be `5`.
 
+== Functions
+
+We will imagine functions as #ref(<Abstractions>, supplement: "abstractions") that take inputs, and result in outputs.
+
+=== A quick visual before jumping in
+
+#figure(caption: "Function that adds two inputs together")[
+  ```python
+  def add(x, y):
+    return x + y
+  ```] <Example-Add-Function>
+
+=== Function signature & body
+
+=== Function inputs & outputs
+
+=== Function parameters & arguments
+
+=== Pure & deterministic functions
+
+== Classes
+
+=== Members
+
+=== Methods
+
+=== Dunder methods
+
+=== Inheritance & Polymorphism
+
+=== Encapsulation & Abstraction
+
+=== Generator & decorator functions
+
 == Try it yourself <Try-It-Yourself>
 You can go to the website: https://www.programiz.com/python-programming/online-compiler/, and follow everything each step of the way, maybe even ask AI but Ill be pretty upset if I found out :(
+
+= Miscellaneous 
+
+== Cache 
 
 = Exam studying methodology <Exam-Studying-Methodology>
 
