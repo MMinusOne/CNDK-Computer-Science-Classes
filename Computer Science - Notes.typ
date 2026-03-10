@@ -183,6 +183,48 @@ Numbers can be convertered to-and-back from base-2 to base-10.
     ]],
 )
 
+== Exercises
+
+- What does CPU stand for?
+
+- Name the two main units we took that make up the CPU?
+
+- Does the ALU perform all opretation in base-10?
+
+- Match each one to it's function:
+
+  - ALU
+  - CU
+
+a) Manages and executes instructions
+b) Handles arithmetic operations (addition, subtraction, etc.)
+
+- What does "clock speed" measure in a CPU, what unit is it measured in?
+
+- Convert 1 GHz to Hz.
+
+- What is the main difference between primary memory and secondary memory in terms of data persistence?
+
+- Fill in the blanks:
+Primary memory is $"__________"$ and $"__________"$, while secondary memory is $"__________"$ and $"__________"$.
+(Options: fast, slow, volatile, non-volatile)
+
+- Give an example of data that would be appropriate for:
+a) Primary memory
+b) Secondary memory
+
+- Explain in your own words what "volatile" means in the context of computer memory. Provide an example.
+
+- How many bits are in 1 byte?
+
+- What is the smallest unit of data?
+
+- What are the differences between base-2 and base-10, Which one is used by computers internally?
+
+- Convert $(150)_10$ to base-2.
+
+- Convert $(11111)_2$ to base-10.
+
 = Python
 
 == Introduction
@@ -434,6 +476,96 @@ We will imagine functions as #ref(<Abstractions>, supplement: "abstractions") th
 
 === Generator & decorator functions
 
+== Exercises
+
+- What does it mean that Python is an "interpreted" language? How does this differ from a "compiled" language?
+
+- Match the characteristic to its definition:
+
+  - general-purpose
+  - high-level
+  - interpreted
+
+Definitions:\
+a) Built on many lower-level abstractions to provide an easy language \
+b) A programming language that can be used for most use-cases \
+c) An external program reads and executes instructions line by line
+
+- Question 3: What are the two additional characteristics of Python mentioned in the notes?
+(Hint: one is about execution order, one is about programming style)
+
+- In the context of interpreted languages, what is the "interpreter"?
+
+- Identify the data type of each value:
+a) 42
+b) 3.14
+c) True
+d) "Hello World"
+e) [1, 2, 3]
+f) {"name": "John", "age": 25}
+
+- What is the difference between an int and a float?
+
+- What are the two possible values for a bool data type?
+
+- Create a list called temperatures containing the values: 20.5, 22.0, 19.8, 21.3
+
+- What is the length of the following lists?
+a) [1, 2, 3, 4, 5]
+b) []
+c) ["apple", "banana", "cherry"]
+d) [[1, 2], [3, 4], [5, 6]]
+
+- True or False: In Python, lists are heterogeneous, meaning they can hold multiple data types.
+
+- What would be the result of accessing: `grades[0]`, `grades[2]`, and `grades[4]`
+
+```py
+grades = [10, 5.2, 12.5, 13.2]
+```
+
+- Create a dictionary called student with keys "name", "age", and "grade" with appropriate values.
+
+- What would `person["city"]` return?
+
+```py
+person = {"name": "Alice", "age": 28, "city": "Beirut"}
+```
+
+- What are the values of x and y after this code executes?
+
+```py
+x = 10
+y = x
+x = 20
+```
+
+- What would be the result of:
+a) `"Hello" + " " + "World"`
+b) `"Python" + "3"`
+
+- Evaluate the following (True or False):
+a) `10 == 10`
+b) `5 == 7`
+c) `"hello" == "hello"`
+d) `"Hello" == "hello"`
+
+- Is the statement `x == x` always `True` for any variable `x`? Why or why not?
+
+- What does the not operator do?
+
+- Evaluate:
+a) not True
+b) not False
+c) not (5 > 3)
+d) not (10 == 20)
+
+- Given `x = 10` and `y = 5`, evaluate:
+a) x > y
+b) x < y
+c) not (x > y)
+d) not (x < y)
+
 == Try it yourself <Try-It-Yourself>
 You can go to the website: https://www.programiz.com/python-programming/online-compiler/, and follow everything each step of the way, maybe even ask AI but Ill be pretty upset if I found out :(
 
@@ -441,7 +573,7 @@ You can go to the website: https://www.programiz.com/python-programming/online-c
 
 == Cache
 
-A cache is a place of storage of temporary information that get added(*inserted*) and removed (*evicted*) based on certain criteria, the criteria to add information in the cache is called an *insertion policy*, and the word to remove something from the cache is called an *eviction policity*, this mechanism is mainly used for performance reasons, for
+A cache is a place of storage of temporary information that get added(*inserted*) and removed (*evicted*) based on certain criteria, the criteria to add information in the cache is called an *insertion policy*, and the word to remove something from the cache is called an *eviction policy*, this mechanism is mainly used for performance reasons, for
 #figure()[
   - #strong()[Tiktok example scenario] : #text()[A Tiktok video is stored in the US, and you amongst other Lebanese people watch that video really often on their phones, Tiktok might consider that fact, and decide to insert the video in a cache (the placement of storage) that is closer to Lebanon, that way when people want to go watch that video, it goes and gets that video information from somewhere closer, resulting in faster speeds.
     ]
