@@ -9,3 +9,19 @@
 } else if calc.odd(y) {
   color_one
 } else if calc.even(y) { color_two }
+
+#let code-block(body, lang: str, height: auto) = {
+  block(
+    fill: rgb("#1F2937"),
+    inset: 12pt,
+    radius: 4pt,
+    width: 100%,
+    height: height,
+  )[
+    #align(start)[
+      #text(fill: white, font: "Courier New")[
+        #raw(body, lang: lang, block: true)
+      ]
+    ]
+  ]
+}
