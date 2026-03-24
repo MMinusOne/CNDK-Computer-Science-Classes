@@ -1,351 +1,300 @@
-#import "templates.typ" as templates
+#import "templates.typ": *
+
+
+#let code-block(body, lang: str, height: auto) = {
+  block(
+    fill: rgb("#1F2937"),
+    inset: 12pt,
+    radius: 4pt,
+    width: 100%,
+    height: height,
+  )[
+    #align(start)[
+      #text(fill: white, font: "Courier New")[
+        #raw(body, lang: lang, block: true)
+      ]
+    ]
+  ]
+}
+
 
 #set page(
   paper: "a4",
   margin: (x: 1.8cm),
 )
 #set heading(numbering: "1.")
-#show ref: it => text(blue, it)
 
-#title("Computer Science 1: Notes")
-
-#outline(title: "Table of Contents")
-
-= Computer Architecture
-
-== Introduction
-
-== CPU <CPU>
-
-#grid(
-  columns: 2,
-  grid.cell(align: left)[
-    - The CPU (#strong()[C]entral-#strong()[P]rocessing-#strong()[U]nit) is the square component we saw in class inside the computer.
-
-    - It consists of many smaller units that handle different things, but in the explanation we will take, it will only contain an #ref(<ALU>, supplement: "ALU") and a #ref(<CU>, supplement: "CU"), both of their explanations will be simplified.
-
-    - It's essentially the brain of the computer, handling all the computation (we can call them tasks) that happen on the computer.
-  ],
-
-  grid.cell()[#pad(x: 1cm)[
-      #figure(caption: "A physical CPU")[
-        #image("./images/cpu.png", width: 3cm)]],
-  ],
+#show link: it => text(secondary, it)
+#show ref: it => text(secondary, it)
+#show heading.where(level: 1): it => block(
+  text(size: 24pt, weight: "bold", fill: primary, it)
+    + v(0.3em)
+    + line(length: 100%, stroke: 2pt + secondary)
+    + v(0.5em),
 )
 
-=== ALU <ALU>
-- The ALU (#strong()[A]rithmetic-#strong()[L]ogic-#strong()[U]nit) is a component/unit of the #ref(<CPU>, supplement: "CPU")
-
-- It handles all the arithmetic (addition, subtraction, division, multiplication, etc...)
-
-- All the operations that happen inside the ALU are in base-2
-
-
-
-
-=== CU <CU>
-
-- The CU (#strong()[C]ontrol-#strong()[U]nit) is a component/unit of the #ref(<CPU>, supplement: "CPU")
-
-- It will manage and execute instructions.
-
-- For now, we will think of instructions as operations needed to perform certain actions on the computer (adding two numbers, opening an app, etc...)
-
-=== CPU Characteristics
-
-- A CPU has a clock speed: the speed of which instructions will execute, and it is a frequency.
-
-- $1"GHz" = 1 * 10^(9) "Hz"$
-== Memory
-
-- Memory in the context of a computer system is the place where "data" will be stored, data can be for example: images, text, files, #ref(<Variables>, supplement: "Variables"), etc...
-
-- We will talk about two types of memory: Primary Memory, and Secondary Memory.
-
-- We will talk about the data units: bit, byte, kb, mb, gb.
-
-- #strong()[Primary Memory]: Characteristics of primary memory is that it's fast, and "volatile", but what does volatile mean? In this context, it will mean that after the computer restarts, the data will not be saved, for example: when playing a game, the amount of health you have will not be saved after the computer restarts, it only ever was in-memory the time you were playing before. Examples of primary memory is #ref(<RAM>, supplement: "RAM").
-
-- #strong()[Secondary Memory]: Secondary memory is slow, but non-volatile, meaning the data will be saved after the computer restarts, this would be ideal for images for example, you would not want them to disappear after you restart.
-
-
-== RAM <RAM>
-
-
-#grid(
-  columns: 2,
-  grid.cell(align: left)[
-    - RAM (#strong()[R]andom-#strong()[A]ccess-#strong()[M]emory) is the a type of memory. It's the green sticks I've shown you in class.
-    - RAM is primary memory.
-  ],
-  grid.cell()[#pad(x: 1cm)[
-      #figure(caption: "A physical stick of RAM")[
-        #image("./images/ram.png", width: 5cm)]],
-  ],
+#show heading.where(level: 2): it => block(
+  above: 1.5em,
+  below: 1em,
+  text(size: 18pt, weight: "bold", fill: secondary, it),
 )
 
-== HDD
-
-#grid(
-  columns: 2,
-  grid.cell()[
-    - HDD (Hard-Disk-Drive) is a type of memory. It's the metal square Ive shown you in class.
-
-    - HDD is secondary-memory.
-  ],
-  grid.cell()[#pad(x: 1cm)[
-      #figure(caption: "An HDD")[
-        #image("./images/hdd.jpg", height: 3cm)]
-    ]
-  ],
+#show heading.where(level: 3): it => block(
+  above: 1.2em,
+  below: 0.8em,
+  text(size: 14pt, weight: "bold", fill: dark, it),
 )
 
-== Converting data sizes (In the decimal system (SI))
+#align(center)[
+  #v(3cm)
+  #text(size: 32pt, weight: "bold", fill: primary)[Computer Science]
+  #v(0.5cm)
+  #text(size: 20pt, fill: secondary)[Full Study Notes]
 
-- The bit is the single smallest data unit.
-- $1" byte" = "8 bits"$
-- $1" kilobyte" = "1000 bytes"$
-- $1" megabyte" = "1000 kilobytes"$
-- $1" gigabyte" = "1000 megabytes"$
+]
 
-== Number Systems
+#pagebreak()
 
-=== Base-10 <Base-10>
+#outline(title: text(size: 20pt, weight: "bold", fill: primary)[Table of Contents])
 
-- Base-10 is the number system we humans use.
-
-- It's made up of 10 digits, digits from (0 to 9): 0, 1, 2, 3, 4, 5, 6, 7, 8, 9.
-
-- Any other number is made up from these the 10 digits.
-
-=== Base-2 <Base-2>
-
-- Base-2 is the number system is computers use.
-
-- It's made up of two digits: `0` and `1`.
-
-- Any other number is made up from these the `2` digits.
-
-=== Relationship between base-2 and base-10
-
-Numbers can be converted to-and-back from base-2 to base-10.
-
-==== Converting from Base-10 to Base-2
-
-#grid(
-  columns: 2,
-  grid.cell()[
-    We will learn the proccess by trying to solve for $x$ in: $x_2 = (75)_10$, so we need to convert 75 to the base-2 system.
-
-    - Step 1: Make a table.
-    - Step 2: Divide `75` by `2`.
-    - Step 3: If the number is a decimal, take everything before the decimal and assign it the bit `1`, if the number is a whole number, write the number as is and assign it the bit `0`.
-    - `(75/2)` = `37.5`, we will take `37` and set the bit to `1`, then we repeat until `1`, `(37/2)` = `18.5`, we take `18`, then `18/2` = `9`, we take `8` and set the bit to `0`, then `9/2` = `4.5`, we take `4` and set the bit to `1`, `4/2` = `2`, and `2/2` = `1`, then `1/2` = `0.5`(special scenario) and set the bit to `1` and stop there..
-    - Step 4: Construct the number, we will take the bits from the table bottom-up, so:
-    $(75)_10 = (1001011)_2$
-  ],
-  grid.cell()[
-    #figure(
-      caption: "Table for converting 75 to base-2.",
-    )[
-      #table(
-        columns: 3,
-        [number], [index], [bit],
-        [37], [0], [1],
-        [18], [1], [1],
-        [9], [2], [0],
-        [4], [3], [1],
-        [2], [4], [0],
-        [1], [5], [0],
-        [$1/2$], [6], [1],
-      )
-    ] <Table-75>
-  ],
-)
-
-==== Converting from Base-2 to Base-10
-
-#grid(
-  columns: 2,
-  grid.cell()[
-    We will take the same example as above and in #ref(<Table-75>), and we will use the indexes to remake the base-10 number.
-
-    we had  $(75)_10 = (1001011)_2$
-
-    We need to only consider the "1"s and their indexes as shown in #ref(<The-1s-and-their-indexes>)
-
-    $(1001011)_2 = (2^0 + 2^1 + 2^3 + 2^6)_10 = (75)_10$
-  ],
-  grid.cell()[
-    #pad(left: 2cm)[#figure(caption: "The 1's and their indexes.")[
-        #image("./images/75-number-systems.png")] <The-1s-and-their-indexes>
-    ]],
-)
+#pagebreak()
 
 
+#include "sections/Computer Architecture/main.typ"
 
 = Python
 
 == Introduction
-Definition: Python is a "high-level", "interpreted", "general-purpose" scripting language.
+#block(
+  fill: secondary.lighten(80%),
+  inset: 12pt,
+  radius: 4pt,
+  width: 100%,
+)[
+  #text(size: 12pt, fill: dark, weight: "bold")[
+    Definition: Python is a "high-level", "interpreted", "general-purpose" scripting language.
+  ]
+]
 
-Explanation of the three characteristics:
-- #strong()[general-purpose]: A programming language that can be used for most use-cases and does not follow one paradigm.
-- #strong()[interpreted]: A programming language is interpreted when there is an external program (the "interpreter") that is reading the instructions line by line and executing the instructions that would otherwise not be executable by the CPU (#ref(<Interpreted-Process>)). By contrast, a compiled programming language is a language that gets translated to instructions the CPU can execute directly by the "compiler" (#ref(<Compiled-Process>)).
+#v(1em)
 
-#grid(
-  columns: 2,
-  grid.cell()[
-    #figure(caption: "Interpreted languages process.")[#image(
-      "./images/interpreter.png",
-      height: 4cm,
-    )] <Interpreted-Process>
-  ],
-  grid.cell()[
-    #figure(caption: "Compiled languages process.")[#image("./images/compiler.png", height: 7cm)] <Compiled-Process>
-  ],
+\
+#table(
+  columns: (auto, 1fr),
+  align: (left, left),
+  fill: (x, y) => tableStripes(x, y, color_one: block-bg, color_two: white),
+  stroke: 1pt + secondary,
+  inset: 10pt,
+
+  [#text(fill: white, weight: "bold")[Characteristic]], [#text(fill: white, weight: "bold")[Explanation]],
+
+  [#text(weight: "bold")[High-Level]],
+  [Built on many lower-level abstractions. Python provides an easy-to-use language by building upon harder programming concepts and technologies.],
+
+  [#text(weight: "bold")[Interpreted]],
+  [An external program (the interpreter) reads and executes instructions line by line. Unlike compiled languages, Python code is interpreted at runtime.],
+
+  [#text(weight: "bold")[General-Purpose]],
+  [Can be used for most use-cases. Python is versatile: web development, data science, automation, etc.],
+
+  [#text(weight: "bold")[Sequential]], [Executes instructions from top to bottom by default.],
+
+  [#text(weight: "bold")[Imperative]], [Uses imperative programming style to maintain state.],
 )
 
-- #strong()[high-level]: #grid(
+#v(1em)
+
+#align(center)[
+  #grid(
     columns: 2,
-    grid.cell()[Built on many lower-level "abstractions", "abstractions" in this context are harder programming languages, concepts and technologies that Python builds upon to provide an easy language.],
     grid.cell()[
-      #figure(caption: "Abstractions.")[#image("./images/abstractions.png", height: 7cm)] <Abstractions>
+      #figure(caption: "Compiled languages process.")[#image("./images/compiler.png", height: 8cm)] <Compiled-Process>
+    ],
+    grid.cell()[#figure(caption: "Abstractions.")[#image("./images/abstractions.png", height: 8cm)] <Abstractions>
     ],
   )
+]
 
-Additional characteristics:
-- #strong()[sequential]: Python executes instructions by sequence by default, from top to bottom.
-- #strong()[imperative]: The programming style Python uses to maintain state.
+
+
 
 == Data Types
 
-- #strong()[int]: (integer) a whole number, example: `10`, `25`, `300`; numbers with a decimal place are not integers(`10.5`, `2.8`, `1.0`).
-- #strong()[float]: A decimal number, example: `52.6`, `19.3`; numbers with `0` as a decimal place are floats, like: `1.0`, `5.0`.
-- #strong()[bool]: A data type which is either `True`, or `False`.
-- #strong()[str]: A sequence of characters, example: `"Hello"`, `"This is a sentence"`, `""`.
-- #strong()[list]: A sequence of elements.
-example:
-```python
-grades = [10, 5.2, 9.8, 12.5, 13.2]
-names = ["John", "Johnny", "Johnnathan", "John"]
-empty = []
-list_of_lists = [["element 1", "element 2", "element 3"], [5, 10, 20]]
-```
-Characteristics:
-- Lists are heterogenous in Python: meaning lists can hold multiple data types and are not forced to maintain one data-type, a list can have elements of any other data-type.
-- The length of a list is how many elements it holds, for example, the length of `grades` is `5`, and of `empty` is `0`.
-- The index of an element in a list is the position of that element `0`-based, and can be used to access that element, example:
+#table(
+  columns: (auto, 1fr),
+  align: (left, left),
+  fill: (x, y) => tableStripes(x, y, heading_color: secondary),
+  stroke: 1pt + secondary,
+  inset: 10pt,
 
-`grades[0]` would give `10`, `grades[1]` would give `5.2`, and so on...
+  [#text(fill: white, weight: "bold")[Type]], [#text(fill: white, weight: "bold")[Description & Examples]],
 
-- List indexing is non-commutative: $lambda upsilon != upsilon lambda$
-You cannot access lists by writing the index before the list, meaning:
-0[grades] is not valid. Only grades[0] is valid.
+  [#raw("int", lang: "python")], [Integer - a whole number. Examples: `10`, `25`, `300`, `-5`],
 
-- #strong()[dict]: (dictionary) is a key-value store, example:
-```python
-person = {"name": "John", "age": 30}
-```
+  [#raw("float", lang: "python")], [Decimal number. Examples: `52.6`, `19.3`, `1.0`, `5.0`],
 
-This is a dict that has two keys: `name` and `age`, with values: `"John"` and `30`.
+  [#raw("bool", lang: "python")], [Boolean - either `True` or `False`],
 
-- `D[K]` where `K` is the key, is the value of that key in that dict, example: `person["name"]` would give us "John".
+  [#raw("str", lang: "python")], [String - sequence of characters. Examples: `"Hello"`, `"Text"`, `""`],
+
+  [#raw("list", lang: "python")],
+  [Sequence of elements. Example: `[10, 5.2, 9.8]`
+    \ Lists are heterogeneous and 0-indexed
+    \ List indexing is non-commutative
+  ],
+
+  [#raw("dict", lang: "python")],
+  [Dictionary - key-value store. Example: `{"name": "John", "age": 30}`
+    \ Access: `person["name"]` → `"John"`],
+)
+
+#v(1em)
 
 == Variables <Variables>
 
-Variables in Python have two characteristics, they are "mutable" and "untyped".
-
-- "mutable": They can change, evolve and be re-assigned.
-- "untyped": They do not have a specific type.
+Variables in Python are #text(fill: primary, weight: "bold")[mutable] (can change) and #text(fill: primary, weight: "bold")[untyped] (no specific type restriction).
 
 examples:
 
-```python
-name = "Johnny"
-johnny_age = 20
-grades = [10, 5.2, 9.8, 12.5, 13.2]
-person = {"name": "John", "age": johnny_age}
-```
-
-Here, we have declared four variables, and assigned each to their own value. Note that `person["age"]` would be `20`, since it's using the variable `johnny_age`.
+#code-block(
+  ```python
+    name = "Johnny"
+    johnny_age = 20
+    grades = [10, 5.2, 9.8, 12.5, 13.2]
+    person = {"name": "John", "age": johnny_age}
+  ```.text,
+  lang: "Python",
+)
 
 
 == Operators
 
 === Arithmetic operators
 
-- 1.) Addition (`+`)
-- 2.) Subtraction (`-`)
-- 3.) Multiplication (`*`)
-- 4.) Division (`/`)
+#table(
+  columns: (auto, 1fr, auto),
+  align: (center, left, center),
+  fill: (x, y) => tableStripes(x, y),
+  stroke: 1pt + secondary,
+  inset: 8pt,
 
-Note: $"int" in ZZ$
-- $"int" + "int" -> "int"$
-- $"int" - "int" -> "int"$
-- $"int" * "int" -> "int"$
-- $"int" / "int" -> "float"$
+  [#text(fill: white, weight: "bold")[Operator]],
+  [#text(fill: white, weight: "bold")[Name]],
+  [#text(fill: white, weight: "bold")[Example]],
 
-Why is $"int" / "int" -> "float"$ and the others don't behave this way? Because there isn't any two integers you can add to each other that will give you a decimal number,  but there are integers that can divide each other to give you a float, so a `int` divided by an `int` will always result in a float. Other type theoretics include:
+  [#text(size: 14pt, weight: "bold")[`+`]], [Addition], [`10 + 5 = 15`],
+  [#text(size: 14pt, weight: "bold")[`-`]], [Subtraction], [`10 - 5 = 5`],
+  [#text(size: 14pt, weight: "bold")[`*`]], [Multiplication], [`10 * 5 = 50`],
+  [#text(size: 14pt, weight: "bold")[`/`]], [Division], [`10 / 5 = 2.0`],
+)
 
-- $"str" + "str" -> "str"$
-- $"float" + "float" -> "float"$
-- $"int" + "float" -> "float"$
+#v(0.5em)
+
+#block(
+  fill: block-bg,
+  inset: 10pt,
+  radius: 4pt,
+)[
+  #text(fill: dark)[
+    *Important:* Division always returns a float: `int / int → float`
+  ]
+]
+
+#v(1em)
+
 
 === Comparison operators
 
-We will define variables for example-purposes: ```python
-first_number = 10
-second_number = 5
-first_string = "John"
-second_string = "Johhny"
-```
+#table(
+  columns: (auto, 1fr, auto),
+  align: (center, left, center),
+  fill: (x, y) => tableStripes(x, y),
+  stroke: 1pt + secondary,
+  inset: 8pt,
+
+  [#text(fill: white, weight: "bold")[Operator]],
+  [#text(fill: white, weight: "bold")[Name]],
+  [#text(fill: white, weight: "bold")[Result]],
+
+  [#text(size: 14pt, weight: "bold")[`==`]], [Equality], [`10 == 10` → `True`],
+  [#text(size: 14pt, weight: "bold")[`!=`]], [Inequality], [`10 != 5` → `True`],
+  [#text(size: 14pt, weight: "bold")[`>`]], [Greater than], [`10 > 5` → `True`],
+  [#text(size: 14pt, weight: "bold")[`<`]], [Less than], [`10 < 5` → `False`],
+  [#text(size: 14pt, weight: "bold")[`>=`]], [Greater or equal], [`10 >= 10` → `True`],
+  [#text(size: 14pt, weight: "bold")[`<=`]], [Less or equal], [`5 <= 10` → `True`],
+)
 
 
-- 5.) Equality (`==`): Will return a `bool` to see whether the two sides are equal. So we can say:
-$forall (x,y) => (x == y) -> "bool"$
+#v(1em)
 
-Translation(haha): For every variable `x` and `y`, `x == y` will always return a `bool`.
+=== Logical Operators
+#let truthTableCase = (p: bool, q: bool) => {
+  return (
+    (
+      if p { "True" } else { "False" },
+      if q { "True" } else { "False" },
+      if p and q { "True" } else { "False" },
+      if p or q { "True" } else { "False" },
+      if p { "False" } else { "True" },
+      if q { "False" } else { "True" },
+    ),
+  )
+}
 
-examples:
-- `first_number == first_number` would be `True`, because `10 == 10`, and also, $forall (x) => (x == x) = "True"$ (For every variable `x`, `x == x` will always be `True`).
-- `first_string == second_string` would be `False`, because `John` is not equal to `Johnny`.
+#table(
+  columns: (1fr, 1fr, 1fr, 1fr, 1fr, 1fr),
+  align: (center, center, center, center),
+  inset: 12pt,
+  fill: (x, y) => tableStripes(x, y),
 
-- 6.) Inequality (`!=`): Will return a `bool` to see whether the two sides are not equal. It holds the same type-theory as equalities.
+  [#text(white, weight: "bold")[$p$]],
+  [#text(white, weight: "bold")[$q$]],
+  [#text(white, weight: "bold")[
+    Conjunction \
+    $p$ and $q$ \
+    $p and q$
+  ]],
+  [#text(white, weight: "bold")[
+    Disjunction \
+    $p$ or $q$ \
+    $p or q$
+  ]],
+  [#text(white, weight: "bold")[
+    Negation \
+    not $p$ \
+    $not p$
+  ]],
+  [#text(white, weight: "bold")[
+    Negation \
+    not $q$ \
+    $not q$
+  ]],
 
-examples:
-- `first_number != first_number` would be `False`, because `10` is equal to `10`.
-- `second_string != first_string` would be `True`, because `John` is not equal to `Johnny`.
+  ..truthTableCase(p: true, q: true).flatten(),
+  ..truthTableCase(p: true, q: false).flatten(),
+  ..truthTableCase(p: false, q: true).flatten(),
+  ..truthTableCase(p: false, q: false).flatten(),
+)
 
-=== Logical operators
-
-- 7.) Negation (`not`): Given a `bool` it will return the inverse of that `bool`. By definition, if variable `x` is a `bool`:
-$forall (x) => ("not" x) -> "bool"$
-
-Translation: For any variable `x`, `not x` will give a `bool`.
-
-Alternatively, we might see `not` as $not$.
-
-example:
-- `not True` = `False`.
-- `not False` = `True`.
-
-- 8.) Bigger-than, less-than, bigger-than-or-equal, less-than-or-equal (`<`, `>`, `<=` `>=`): Will return a `bool`.
-
-examples:
-- `10 > 5` = `True`.
-- `10 < 5` = `False`.
+#v(1em)
 
 === Bitshift operators
 
 - 9 .) Left-bitshift (`<<`): `x << n`, where `x` and `n` are `int`s, will shift the bits of `x` by `n` zeroes and return the base-10 `int`.
 
 Example:
-- `5 << 2`:
-- If we convert 5 to base-2: $(5)_10 = (101)_2$.
-- And left shift by 2: `(10100)` (We added two zeroes.)
-- Now if we convert back to base-10, the number becomes: $2^2 + 2^4 = 20$.
 
+#block(
+  fill: block-bg,
+  inset: 12pt,
+  radius: 4pt,
+  width: 100%,
+)[
+  - `5 << 2`:
+  - We convert 5 to base-2: $(5)_10 = (101)_2$.
+  - And left shift by 2: `(10100)` (We added two zeroes.)
+  - Now if we convert back to base-10, the number becomes: $2^2 + 2^4 = 20$.
+]
 - 10 .) Right-bitshift (`>>`): The inverse of left-bitshift.
 
 #grid(
@@ -362,99 +311,260 @@ Example:
   ],
 )
 
-=== Operation + Assignment
+=== Operation + Assignment By Examples
+
 
 All the arithmetic, and bitshift operators have an assignment equivelant used to modify variables.
 
-examples: We will take those variables for the examples:
 
-```python
-first_number = 10
-second_number = 5
-first_string = "John"
-second_string = "Johhny"
-```
+#code-block(
+  ```python
 
-Applications:
+  # We will declare these variables for example purposes
+  first_number = 10
+  second_number = 5
+  first_string = "John"
+  second_string = "Johhny"
 
-```python
-first_string += " Jason" # first_string will be "John Jason" after that, because "John" + " Jason" = "John Jason".
-second_number -= 6 # second_number will be -1 after that, because 5 - 6 = -1.
-second_number *= -2 # second_number will be 2 after that, because (-1)(-2) = 2.
-first_number /= 5 # first_number will be 2.0 after that, because 10 / 5 = 2.0.
-first_number = 5 # first_number will be 5 after that, normal assignment.
-first_number <<= 2 # first_number will be 20 after that, because 5 << 2 = 20
-first_number >>= 3 # first_number will be 2 after that, because 20 >> 3 is 2.
-```
+  first_string += " Jason" # first_string will be "John Jason" after that, because "John" + " Jason" = "John Jason".
+  second_number -= 6 # second_number will be -1 after that, because 5 - 6 = -1.
+  second_number *= -2 # second_number will be 2 after that, because (-1)(-2) = 2.
+  first_number /= 5 # first_number will be 2.0 after that, because 10 / 5 = 2.0.
+  first_number = 5 # first_number will be 5 after that, normal assignment.
+  first_number <<= 2 # first_number will be 20 after that, because 5 << 2 = 20
+  first_number >>= 3 # first_number will be 2 after that, because 20 >> 3 is 2.
+  ```.text,
+  lang: "python",
+)
+
 
 == Loops
 
-=== While loops
+Loops are used for repeated actions.
 
-=== A quick visual before jumping in
+=== A visual
 
-#figure(caption: "A while loop that runs indefinitely", supplement: "Code")[
+#code-block(
   ```python
-  while True:
-      print("Hello")
-  ```
-]
+  accumulator = 0 # A variable that accumulates
 
+  for current_number in range(0, 10): # A loop over the range 0 to 10 (10 exclusive), and current_number is how many loops we have made so far
+    accumulator += current_number # Mutating accumulator and adding current_number to it
+  ```.text,
+  lang: "python",
+)
 
+After this, `accumulator` will be $0 + 1 + 2 + 3 + 4 + 5 + 6 + 7 + 8 + 9 = 45$.
+\  \ \ \
+=== Example: Using lists to match two n-length lists
+
+#code-block(
+  ```python
+  names  = ["John", "Johnnathan", "Jay", "Jane", "Jake"] # List of n names
+  grades = [9, 7.5, 6, 3.5, 6] # List of n grades
+  n      = 5
+
+  for i in range(0, n): # Looping n times
+    name = names[i] # Accessing the n-th name from the names list
+    grade = str(grades[i]) # Accessing the n-th grade from the grades list, and converting it to a string, the same way we would do with an int(...)
+    print(name + " has a grade of " + grade) # Concatenating (Adding) the strings together to make a sentence, here we see why we turned grade into a "str", because str + int is not possible
+  ```.text,
+  lang: "python",
+)
+
+The output is as shown below:
+
+#code-block(
+  ```bat
+  John has a grade of 9
+  Johnnathan has a grade of 7.5
+  Jay has a grade of 6
+  Jane has a grade of 3.5
+  Jake has a grade of 6
+  ```.text,
+  lang: "python",
+)
+
+=== Using lists without the range function
+
+Until now, we are still using the `range` function, but are *iterable* by default.
+An iterator allows any object to be *iterated over* by a loop. Let's compare:
+
+#grid(
+  columns: (1fr, 0.5fr, 1fr),
+  grid.cell()[
+    #figure(caption: "Looping over lists with range", supplement: "Code")[
+      #code-block(
+        ```python
+        nums = [1,2,3,4,5]
+        n = 5
+
+        for i in range(0, n):
+          print(nums[i])
+        ```.text,
+        lang: "python",
+        height: 8em,
+      )
+    ]
+  ],
+  grid.cell()[],
+  grid.cell()[
+    #figure(caption: "Looping over lists with the list's iterative property", supplement: "Code")[
+      #code-block(
+        ```python
+        nums = [1,2,3,4,5]
+
+        for num in nums:
+          print(num)
+        ```.text,
+        lang: "python",
+        height: 8em,
+      )
+    ]
+  ],
+)
 
 == Functions
 
-We will imagine functions as #ref(<Abstractions>, supplement: "abstractions") that take inputs, and result in outputs.
+Functions should be thought as machines that take an input and give us an output.
 
-=== A quick visual before jumping in
-
-#figure(caption: "Function that adds two inputs together", supplement: "Code")[
-  ```python
-  def add(x, y):
-    return x + y
-  ```] <Example-Add-Function>
-
-#templates.definition(title: "Functions")[
-  Functions are machines that can take multiple inputs and produce multiple outputs.
-  #align(center)[
-    #image("images/Functions-definition.svg", width: 80%)
-  ]
+#figure(caption: "Function diagram")[
+  #image("images/Functions-definition.svg", width: 30em)
 ]
+\ \ \
+=== A visual
 
-// TODO!
+#figure(caption: "A function that adds two numbers, x and y.", supplement: "Code")[
+  #code-block(
+    ```python
+    def add(x, y):
+      return x + y
+    ```.text,
+    lang: "Python",
+  )
+] <Functions-Visual>
+
+Now, to use this function we just *defined*, we will need to *call* it, as such:
+
+#figure(supplement: "Code", caption: "Calling the function add")[
+  #code-block(
+    ```python
+    result = add(10, 5)
+    print(result)
+    ```.text,
+    lang: "Python",
+  )
+] <Function-Calling>
+
+
+The output of result will now be `15`, since the function handled the addition of `x` and `y`, and `x` was `10`, and y was `5`.
+
+=== Parameters & Arguments
+
+- The parameters of a function is what we label the inputs. Consider #ref(<Functions-Visual>), the parameters of that function are `x` and `y`.
+
+- The arguments of a function is what is supplied for the labels of the inputs. Consider #ref(<Function-Calling>), the arguments are `10` and `5`.
+
+=== Returning Values
+
+The *return value* of a function is what the function outputs. Taking as example #ref(<Functions-Visual>), the return value can be described as `x + y`, or also the sum of its inputs.
+
+The return value is also what comes after the *return* keyword.
+
+=== Deterministic & Pure function
+
+#table(
+  columns: (auto, 1fr),
+  inset: 10pt,
+  fill: (x, y) => tableStripes(x, y),
+  stroke: 1pt + secondary,
+  align: (left, left),
+
+  [#text(white)[Function Characteristic]], [#text(white)[Definition]],
+  [Deterministic Function],
+  [
+    A deterministic function is a function that returns the same outputs for the same inputs, and has no randomness in the determination of future states.
+  ],
+
+  [Pure Function],
+  [
+    A pure function is a function that obeys two properties:
+    - It is deterministic
+    - The function has no side effect, meaning no mutation of non-local variables.
+  ],
+)
+
+=== Generator Functions
 
 === Function signature & body
+\ \ \
+=== Using functions to calculate the hypotenuse of a right triangle ABC
 
-We will refer to #ref(<Example-Add-Function>) throughout this.
-the function signature is the `def` keyword, with the name of the function, along with the arguments, so the signature of that function would be: ```python def add(x, y):```
+#code-block(
+  ```python
+  def calculate_hypotenuse(AB, AC):
+    BC = (AB**2 + AC ** 2) ** 0.5
+    return BC
+  ```.text,
+  lang: "python",
+)
 
-The body of that function
+We can describe this function as follows:
 
+- This function is called `calculate_hypotheneuse`.
+- It takes two parameters: AB and AC, which are supposed to be either int's or floats.
+- It returns the hypotheneuse of the triangle ABC.
 
-=== Function inputs & outputs
+== Control Flow
 
-=== Function parameters & arguments
+Control flow describes how execution progresses from one command to the next.
 
-=== Built-in function
+=== A visual
 
-=== Pure & deterministic functions
+#figure(caption: "Control flow, if and else.", supplement: "Code")[
+  #code-block(
+    lang: "python",
+    ```python
+    your_age = 15
+    adult_age = 18
 
-== Classes
+    if your_age >= adult_age:
+      print("You are an adult")
+    else:
+      print("You are a minor")
+    ```.text,
+  )
+]
 
-=== Members
+In the code above, we have two variables, `your_age` and `adult_age`.
 
-=== Methods
+We first compare `your_age` and `adult_age` using `>=` (Bigger than or equal to), which returns a bool type, this bool type is then considered by the *if* statement before it, and accordingly, the *branch* below if (the truthy-case branch) will be executed, otherwise, we are handling it with an *else* statement.
 
-=== Dunder methods
+=== If statements
 
-=== Inheritance & Polymorphism
+*if* executes it's branch if the statement given to it is a truthy value, a *truthy* value is a value that is not *falsy*.
 
-=== Encapsulation & Abstraction
+Some *falsy* values in Python are: ```python None```, ```python 0``` and ```python False```
 
-=== Generator & decorator functions
+*truthy* values evaluate to *True* booleans, and *falsy* values evaluate to *False* booleans.
+
+The structure of an *if statement* looks as such:
+
+#code-block(
+  ```
+  if boolean:
+    branch instructions
+  ```.text,
+  lang: "",
+)
+
+=== Else statements
+
+*else* statements are chained with
 
 == Try it yourself <Try-It-Yourself>
-You can go to the website: https://www.programiz.com/python-programming/online-compiler/, and follow everything each step of the way, maybe even ask AI but Ill be pretty upset if I found out :(
+You can go to the website: #link("https://www.programiz.com/python-programming/online-compiler/"), and follow everything each step of the way, maybe even ask AI but Ill be pretty upset if I found out :(
+
 
 = Miscellaneous
 == Cache
