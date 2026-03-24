@@ -2,7 +2,7 @@
 
 == Variables <Variables>
 
-Variables in Python are #text(fill: primary, weight: "bold")[mutable] (can change) and #text(fill: primary, weight: "bold")[untyped] (no specific type restriction).
+Variables in Python are #text(fill: primary_color, weight: "bold")[mutable] (can change) and #text(fill: primary_color, weight: "bold")[untyped] (no specific type restriction).
 
 examples:
 

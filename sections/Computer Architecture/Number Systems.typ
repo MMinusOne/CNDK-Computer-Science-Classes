@@ -29,16 +29,16 @@ Numbers can be converted to-and-back from base-2 to base-10.
   grid.cell()[
 
     #block(
-      fill: block-bg,
+      fill: block_bg_color,
       inset: 12pt,
       radius: 4pt,
       width: 100%,
     )[
-      #text(fill: primary, weight: "bold")[Example: Convert $(75)_(10)$ to binary]
+      #text(fill: primary_color, weight: "bold")[Example: Convert $(75)_(10)$ to binary]
 
       #v(0.5em)
 
-      #text(fill: dark)[
+      #text(fill: dark_color)[
         *Step 1:* Make a table.
 
         *Step 2:* Divide `75` by `2` repeatedly.

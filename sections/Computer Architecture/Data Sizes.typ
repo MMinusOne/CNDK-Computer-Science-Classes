@@ -6,7 +6,7 @@
   columns: (auto, 1fr),
   fill: (x, y) => tableStripes(x, y),
   inset: 10pt,
-  stroke: 1pt + secondary,
+  stroke: 1pt + secondary_color,
   align: (center, left),
 
   [#text(fill: white, weight: "bold")[Unit]], [#text(fill: white, weight: "bold")[Conversion]],

@@ -53,7 +53,7 @@ The return value is also what comes after the *return* keyword.
   columns: (auto, 1fr),
   inset: 10pt,
   fill: (x, y) => tableStripes(x, y),
-  stroke: 1pt + secondary,
+  stroke: 1pt + secondary_color,
   align: (left, left),
 
   [#text(white)[Function Characteristic]], [#text(white)[Definition]],

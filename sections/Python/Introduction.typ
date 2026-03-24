@@ -2,12 +2,12 @@
 
 == Introduction
 #block(
-  fill: secondary.lighten(80%),
+  fill: secondary_color.lighten(80%),
   inset: 12pt,
   radius: 4pt,
   width: 100%,
 )[
-  #text(size: 12pt, fill: dark, weight: "bold")[
+  #text(size: 12pt, fill: dark_color, weight: "bold")[
     Definition: Python is a "high-level", "interpreted", "general-purpose" scripting language.
   ]
 ]
@@ -18,8 +18,8 @@
 #table(
   columns: (auto, 1fr),
   align: (left, left),
-  fill: (x, y) => tableStripes(x, y, color_one: block-bg, color_two: white),
-  stroke: 1pt + secondary,
+  fill: (x, y) => tableStripes(x, y, color_one: block_bg_color, color_two: white),
+  stroke: 1pt + secondary_color,
   inset: 10pt,
 
   [#text(fill: white, weight: "bold")[Characteristic]], [#text(fill: white, weight: "bold")[Explanation]],

@@ -8,7 +8,7 @@
   columns: (auto, 1fr, auto),
   align: (center, left, center),
   fill: (x, y) => tableStripes(x, y),
-  stroke: 1pt + secondary,
+  stroke: 1pt + secondary_color,
   inset: 8pt,
 
   [#text(fill: white, weight: "bold")[Operator]],
@@ -19,16 +19,17 @@
   [#text(size: 14pt, weight: "bold")[`-`]], [Subtraction], [`10 - 5 = 5`],
   [#text(size: 14pt, weight: "bold")[`*`]], [Multiplication], [`10 * 5 = 50`],
   [#text(size: 14pt, weight: "bold")[`/`]], [Division], [`10 / 5 = 2.0`],
+  [#text(size: 14pt, weight: "bold")[`**`]], [Exponentiation], [`3 ** 4 = 3 * 3 * 3 * 3 = 81`],
 )
 
 #v(0.5em)
 
 #block(
-  fill: block-bg,
+  fill: block_bg_color,
   inset: 10pt,
   radius: 4pt,
 )[
-  #text(fill: dark)[
+  #text(fill: dark_color)[
     *Important:* Division always returns a float: `int / int → float`
   ]
 ]
@@ -42,7 +43,7 @@
   columns: (auto, 1fr, auto),
   align: (center, left, center),
   fill: (x, y) => tableStripes(x, y),
-  stroke: 1pt + secondary,
+  stroke: 1pt + secondary_color,
   inset: 8pt,
 
   [#text(fill: white, weight: "bold")[Operator]],
@@ -118,7 +119,7 @@
 Example:
 
 #block(
-  fill: block-bg,
+  fill: block_bg_color,
   inset: 12pt,
   radius: 4pt,
   width: 100%,

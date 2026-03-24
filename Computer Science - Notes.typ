@@ -9,38 +9,38 @@
 )
 #set heading(numbering: "1.")
 
-#show link: it => text(secondary, it)
-#show ref: it => text(secondary, it)
+#show link: it => text(secondary_color, it)
+#show ref: it => text(secondary_color, it)
 #show heading.where(level: 1): it => block(
-  text(size: 24pt, weight: "bold", fill: primary, it)
+  text(size: 24pt, weight: "bold", fill: primary_color, it)
     + v(0.3em)
-    + line(length: 100%, stroke: 2pt + secondary)
+    + line(length: 100%, stroke: 2pt + secondary_color)
     + v(0.5em),
 )
 
 #show heading.where(level: 2): it => block(
   above: 1.5em,
   below: 1em,
-  text(size: 18pt, weight: "bold", fill: secondary, it),
+  text(size: 18pt, weight: "bold", fill: secondary_color, it),
 )
 
 #show heading.where(level: 3): it => block(
   above: 1.2em,
   below: 0.8em,
-  text(size: 14pt, weight: "bold", fill: dark, it),
+  text(size: 14pt, weight: "bold", fill: dark_color, it),
 )
 
 #align(center)[
   #v(3cm)
-  #text(size: 32pt, weight: "bold", fill: primary)[Computer Science]
+  #text(size: 32pt, weight: "bold", fill: primary_color)[Computer Science]
   #v(0.5cm)
-  #text(size: 20pt, fill: secondary)[Full Study Notes]
+  #text(size: 20pt, fill: secondary_color)[Full Study Notes]
 
 ]
 
 #pagebreak()
 
-#outline(title: text(size: 20pt, weight: "bold", fill: primary)[Table of Contents])
+#outline(title: text(size: 20pt, weight: "bold", fill: primary_color)[Table of Contents])
 
 #pagebreak()
 

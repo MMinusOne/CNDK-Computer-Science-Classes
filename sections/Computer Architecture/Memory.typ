@@ -3,12 +3,12 @@
 == Memory
 
 #block(
-  fill: light,
+  fill: light_color,
   inset: 12pt,
   radius: 4pt,
   width: 100%,
 )[
-  #text(fill: dark)[
+  #text(fill: dark_color)[
     Memory in the context of a computer system is the place where "data" will be stored. Data can be for example: images, text, files, #ref(<Variables>, supplement: "Variables"), etc...
   ]
 ]
@@ -23,7 +23,7 @@ We will discuss:
   columns: (1fr, 1fr),
   inset: 10pt,
   fill: (x, y) => tableStripes(x, y),
-  stroke: 1pt + secondary,
+  stroke: 1pt + secondary_color,
   align: (left, left),
 
   [#text(fill: white, weight: "bold")[Primary Memory]], [#text(fill: white, weight: "bold")[Secondary Memory]],

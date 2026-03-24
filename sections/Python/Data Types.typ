@@ -5,8 +5,8 @@
 #table(
   columns: (auto, 1fr),
   align: (left, left),
-  fill: (x, y) => tableStripes(x, y, heading_color: secondary),
-  stroke: 1pt + secondary,
+  fill: (x, y) => tableStripes(x, y, heading_color: secondary_color),
+  stroke: 1pt + secondary_color,
   inset: 10pt,
 
   [#text(fill: white, weight: "bold")[Type]], [#text(fill: white, weight: "bold")[Description & Examples]],
@@ -28,6 +28,8 @@
   [#raw("dict", lang: "python")],
   [Dictionary - key-value store. Example: `{"name": "John", "age": 30}`
     \ Access: `person["name"]` → `"John"`],
+
+  [#raw("None", lang: "python")], [Represents a null value],
 )
 
 #v(1em)
