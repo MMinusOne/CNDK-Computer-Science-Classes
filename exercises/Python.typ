@@ -234,11 +234,43 @@
       lang: "python",
     )
 
-    3. This algorithm has a time complexity of: $O(n)$
-      A space complexity of: $O(1)$
+    3. This algorithm has a time complexity of: $O(n)$: Because instructions increase linearly with input size. \
+      And has a space complexity of: $O(1)$: Because the amount of data we are storing is not proportional and independant of the input size.
 ]
 
 #exercise(title: "Approximate pi using an n-sided hexagon inscribed in a circle")[
+  The circumfrence of a circle is the total distance around it's edge. Archamedes started with a 6 sided hexagon inscribed in a circle, and then added more and more sides to get closer and closer to pi:
+
+  - *Distance formula*: $d = sqrt((x_2 - x_1)^2 + (y_2 - y_1)^2)$
+  - *Formula for point P that lies on the circle*: $(r cos(a), r sin(a))$, where $a$ is the angle of the point relative to the origin, and $r$ is the radius of the circle.
+  The circumfrence of a circle of radius $1$ is $2pi$, and the circumfrence is the total distance on the edge of the circle, if we draw smaller equi-distant lines on the edge of the circle, and sum all of them up, we can get closer and closer to pi the more sides we add.
+
+  Here are the visuals:
+
+  #grid(
+    columns: (1fr, 1fr, 1fr),
+    gutter: 1em,
+    grid.cell()[
+      #figure(caption: "n = 6")[
+        #image("../assets/6-sided-hexagon-circle-inscribed.png")
+      ]
+    ],
+
+    grid.cell()[
+      #figure(caption: "n = 12")[
+        #image("../assets/12-sided-hexagon-circle-inscribed.png")
+      ]
+    ],
+
+    grid.cell()[
+      #figure(caption: "n = 500")[
+        #image("../assets/500-sided-hexagon-circle-inscribed.png")
+      ]
+    ],
+  )
+
+
+
 
 ]
 

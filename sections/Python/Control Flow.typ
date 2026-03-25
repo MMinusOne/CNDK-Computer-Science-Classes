@@ -45,4 +45,56 @@ The structure of an *if statement* looks as such:
 
 === Else statements
 
-*else* statements are chained with
+*else* statements are chained with *if* statements, and are executed in case the previous *if statement* turns out to be falsy, the structure is as such:
+
+#code-block(
+  ```
+  if boolean:
+    branch instructions
+  else:
+    branch instructions
+  ```.text,
+  lang: "",
+)
+
+One thing possible with *else* statements is chaining them with if statements, as such:
+
+#code-block(
+  ```
+  if boolean:
+    branch instructions
+  elif boolean:
+    branch instructions
+  elif boolean:
+    branch instructions
+  else:
+    branch instructions
+  ```.text,
+  lang: "",
+)
+
+Here, we have an if statement, chained with else statements, and a default case.
+
+=== Using control flow to categorize age
+
+#code-block(
+  ```py
+  age = 30
+
+  if age >= 60:
+      print("You're a senior!")
+  elif age >= 40:
+      print("You're an adult!")
+  elif age >= 20:
+      print("You're a young adult!")
+  elif age >= 13:
+      print("You're a teenager!")
+  elif age >= 3:
+      print("You're a child!")
+  else:
+      print("You're an infant!")
+  ```.text,
+  lang: "",
+)
+
+

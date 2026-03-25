@@ -75,6 +75,27 @@
   )
 }
 
+=== Comparison operators
+
+#table(
+  columns: (auto, 1fr, auto),
+  align: (center, left, center),
+  fill: (x, y) => tableStripes(x, y),
+  stroke: 1pt + secondary_color,
+  inset: 8pt,
+
+  [#text(fill: white, weight: "bold")[Operator]],
+  [#text(fill: white, weight: "bold")[Name]],
+  [#text(fill: white, weight: "bold")[Example]],
+
+  [#text(size: 14pt, weight: "bold")[`==`]], [Equality], [`10 == 10` → `True`],
+  [#text(size: 14pt, weight: "bold")[`!=`]], [Inequality], [`10 != 5` → `True`],
+  [#text(size: 14pt, weight: "bold")[`>`]], [Greater than], [`10 > 5` → `True`],
+  [#text(size: 14pt, weight: "bold")[`<`]], [Less than], [`10 < 5` → `False`],
+  [#text(size: 14pt, weight: "bold")[`>=`]], [Greater or equal], [`10 >= 10` → `True`],
+  [#text(size: 14pt, weight: "bold")[`<=`]], [Less or equal], [`5 <= 10` → `True`],
+)
+
 #table(
   columns: (1fr, 1fr, 1fr, 1fr, 1fr, 1fr),
   align: (center, center, center, center),
@@ -108,6 +129,34 @@
   ..truthTableCase(p: true, q: false).flatten(),
   ..truthTableCase(p: false, q: true).flatten(),
   ..truthTableCase(p: false, q: false).flatten(),
+)
+
+#v(1em)
+
+=== Membership Operators
+
+#table(
+  columns: (auto, 1fr, auto),
+  align: (center, left, center),
+  fill: (x, y) => tableStripes(x, y),
+  stroke: 1pt + secondary_color,
+  inset: 8pt,
+
+  [#text(fill: white, weight: "bold")[Operator]],
+  [#text(fill: white, weight: "bold")[Explanation]],
+  [#text(fill: white, weight: "bold")[Example]],
+
+  [#text(size: 14pt, weight: "bold")[`in`]],
+  [Used to check if a certain key is inside a dictionary, returns a bool],
+  [
+    ```python "name" in {"name": "John"}``` $->$  `True`\ because key "name" exists in the dict \
+    ```python "age" in {"name": "John"}``` $->$  `False`\ because key "age" does not exists in the dict
+  ],
+
+  [#text(size: 14pt, weight: "bold")[`not in`]],
+  [Used to check if a certain key is not inside a dictionary, returns a bool],
+  [ ```python "name" not in {"name": "John"}``` $->$  `False`\ because key "name" exists in the dict \
+    ```python "age" not in {"name": "John"}``` $->$  `True`\ because key "age" does not exists in the dict],
 )
 
 #v(1em)
