@@ -90,3 +90,9 @@ We can describe this function as follows:
 - This function is called `calculate_hypotheneuse`.
 - It takes two parameters: AB and AC, which are supposed to be either int's or floats.
 - It returns the hypotheneuse of the triangle ABC.
+
+=== Functions to be aware of
+
+#table( 
+  
+)
