@@ -1,15 +1,8 @@
 #import "../../templates.typ": *
 
 == Introduction
-#block(
-  fill: secondary_color.lighten(80%),
-  inset: 12pt,
-  radius: 4pt,
-  width: 100%,
-)[
-  #text(size: 12pt, fill: dark_color, weight: "bold")[
-    Definition: Python is a "high-level", "interpreted", "general-purpose" scripting language.
-  ]
+#text-block()[
+  Definition: Python is a "high-level", "interpreted", "general-purpose" scripting language.
 ]
 
 #v(1em)

@@ -47,7 +47,7 @@
 
 #include "sections/Computer Architecture/main.typ"
 #include "sections/Python/main.typ"
-#include "sections/Miscellaneous/main.typ"
+// #include "sections/Miscellaneous/main.typ"
 
 \ \ \ \ \ \ \
 
@@ -59,8 +59,8 @@
 - Regarding Python, you can try everything each step of the way, read #ref(<Try-It-Yourself>, supplement: "Try it yourself")
 - Ask me in the group if there's any questions, not in private, I won't respond.
 
-#linebreak()
-#linebreak()
+\
+\
 
 #text()[
   Good Luck! I want good grades.

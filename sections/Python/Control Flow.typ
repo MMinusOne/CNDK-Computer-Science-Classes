@@ -1,5 +1,5 @@
 #import "../../templates.typ": *
-
+\
 == Control Flow
 
 Control flow describes how execution progresses from one command to the next.
@@ -94,7 +94,7 @@ Here, we have an if statement, chained with else statements, and a default case.
   else:
       print("You're an infant!")
   ```.text,
-  lang: "",
+  lang: "Python",
 )
 
 

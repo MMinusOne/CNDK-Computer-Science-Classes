@@ -93,6 +93,97 @@ We can describe this function as follows:
 
 === Functions to be aware of
 
-#table( 
-  
+==== print
+
+Output to the standard output (simplified).
+
+#code-block(
+  ```python
+  >>> print("Hello World")
+  --> Hello World
+  ```.text,
+  lang: "Python",
+)
+
+==== input
+
+#text-block()[
+  If the prompt argument is present, it is written to standard output, the function then reads a line from input and converts it to a string.
+]
+
+#code-block(
+  ```python
+  >>> s = input("--> ")
+  --> Monty Python's Flying Circus
+  >>> s
+  "Monty Python's Flying Circus"
+  ```.text,
+  lang: "Python",
+)
+
+==== int
+
+#text-block()[Returns an integer constructed from a number or a string.]
+
+#code-block(
+  ```python
+  int(123.45) # 123
+  int("123") # 123
+  int("01110011", base=2) # 155
+  ```.text,
+  lang: "Python",
+)
+
+==== len
+
+Returns the length (the number of items) of an object. The argument may be a sequence (such as a string, list or range), or a collection (like a dict).
+
+#code-block(
+  ```python
+  len("Hello") # 5
+  len([1,2,3,4]) # 4
+  len(range(3, 6)) # 3
+  len({
+   "key_1": "value_1",
+   "key_2": "value_2"
+  }) # 2
+  ```.text,
+  lang: "python",
+)
+
+==== range
+
+Range is technically a _class_ not a function, but we will refer to it as a function.
+We will consider valid arguments to be integers.
+
+Refer to #ref(<Loops>, supplement: "Loops") to know how to use it.
+
+=== Standard Libraries & Functions/Properties to be aware of
+
+Library functions are functions that are provided by libraries, and can't be used without importing them.
+
+==== math library
+
+#code-block(
+  ```python
+  import math
+
+  math.pi # 3.14.......
+  math.cos(math.pi) # -1.0
+  math.sin(math.pi / 2) # 1.0
+  ```.text,
+  lang: "python",
+)
+
+==== random library
+
+#code-block(
+  ```python
+    import random
+
+    random.random() # Returns a number between 0 and 1
+    random.randint(a, b) # Returns a random integer N such that a <= N <= b
+    randon.randrange(start, stop, ?step=1) # Returns a randomly selected element from range(start, stop, step)
+  ```.text,
+  lang: "python",
 )
