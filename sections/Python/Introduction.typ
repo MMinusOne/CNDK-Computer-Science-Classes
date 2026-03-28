@@ -38,11 +38,11 @@
     columns: 2,
     grid.cell()[
       #figure(caption: "Compiled languages process.")[#image(
-        "../../images/compiler.png",
+        "/assets/notes/compiler.png",
         height: 8cm,
       )] <Compiled-Process>
     ],
-    grid.cell()[#figure(caption: "Abstractions.")[#image("../../images/abstractions.png", height: 8cm)] <Abstractions>
+    grid.cell()[#figure(caption: "Abstractions.")[#image("/assets/notes/abstractions.png", height: 8cm)] <Abstractions>
     ],
   )
 ]

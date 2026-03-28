@@ -5,7 +5,7 @@
 Functions should be thought as machines that take an input and give us an output.
 
 #figure(caption: "Function diagram")[
-  #image("../../images/Functions-definition.svg", width: 30em)
+  #image("/assets/notes/Functions-definition.svg", width: 30em)
 ]
 \ \ \
 === A visual
@@ -171,6 +171,7 @@ Library functions are functions that are provided by libraries, and can't be use
   math.pi # 3.14.......
   math.cos(math.pi) # -1.0
   math.sin(math.pi / 2) # 1.0
+  math.sqrt(4) # 2
   ```.text,
   lang: "python",
 )
@@ -184,6 +185,7 @@ Library functions are functions that are provided by libraries, and can't be use
     random.random() # Returns a number between 0 and 1
     random.randint(a, b) # Returns a random integer N such that a <= N <= b
     randon.randrange(start, stop, ?step=1) # Returns a randomly selected element from range(start, stop, step)
+    random.uniform(start, stop) # Returns a random float between start and stop
   ```.text,
   lang: "python",
 )

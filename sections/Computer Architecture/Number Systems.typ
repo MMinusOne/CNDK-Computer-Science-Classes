@@ -85,7 +85,7 @@ Numbers can be converted to-and-back from base-2 to base-10.
   ],
   grid.cell()[
     #pad(left: 2cm)[#figure(caption: "The 1's and their indexes.")[
-        #image("../../images/75-number-systems.png")] <The-1s-and-their-indexes>
+        #image("/assets/notes/75-number-systems.png")] <The-1s-and-their-indexes>
     ]],
 )
 

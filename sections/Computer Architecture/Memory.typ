@@ -45,7 +45,7 @@ We will discuss:
   ],
   grid.cell()[#pad(x: 1cm)[
       #figure(caption: "A physical stick of RAM")[
-        #image("../../images/ram.png", width: 5cm)]],
+        #image("/assets/notes/ram.png", width: 5cm)]],
   ],
 )
 
@@ -60,7 +60,7 @@ We will discuss:
   ],
   grid.cell()[#pad(x: 1cm)[
       #figure(caption: "An HDD")[
-        #image("../../images/hdd.jpg", height: 3cm)]
+        #image("/assets/notes/hdd.jpg", height: 3cm)]
     ]
   ],
 )

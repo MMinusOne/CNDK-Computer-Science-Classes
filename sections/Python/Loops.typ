@@ -85,3 +85,42 @@ An iterator allows any object to be *iterated over* by a loop. Let's compare:
     ]
   ],
 )
+
+=== Using `continue` and `break`
+
+#table(
+  columns: (auto, 1fr),
+  inset: 10pt,
+  fill: (x, y) => tableStripes(x, y),
+  stroke: 1pt + secondary_color,
+  align: (left, left),
+
+  [#text(white)[Keyword]], [#text(white)[Functionality]],
+  [continue],
+  [
+    Using `continue` in a loop will stop the next actions in the current loop and skip over to the next iteration.
+  ],
+
+  [break],
+  [
+    Using `break` in a loop will exit the loop completely, kind of like `return` for functions, infact, returning in a loop will break the function.
+  ],
+)
+
+#code-block(
+  ```py
+  nums = [1,2,3,4,5] # List of nums from 1 to 5
+
+  for n in nums:
+    if n == 2:
+      continue # Skip printing if n == 2
+
+    if n == 4:
+      break # Exit(stop) the loop if n == 4
+
+    print(n)
+  ```.text,
+  lang: "python",
+)
+
+So the only outputs here will be `1` and `3`, because we skip printing `2` and we stopped the loop at `4`.

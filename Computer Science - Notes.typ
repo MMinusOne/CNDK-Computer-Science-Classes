@@ -35,7 +35,6 @@
   #text(size: 32pt, weight: "bold", fill: primary_color)[Computer Science]
   #v(0.5cm)
   #text(size: 20pt, fill: secondary_color)[Full Study Notes]
-
 ]
 
 #pagebreak()

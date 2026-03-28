@@ -190,7 +190,7 @@ Example:
     - Now we convert back to base-10, the number becomes: $2^0 = 1$.
   ],
   grid.cell()[
-    #figure(caption: "Right bitshift")[#image("../../images/right-bitshift.png")]
+    #figure(caption: "Right bitshift")[#image("/assets/notes/right-bitshift.png")]
   ],
 )
 

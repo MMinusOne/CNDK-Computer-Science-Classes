@@ -12,7 +12,7 @@
 
   grid.cell()[#pad(x: 1cm)[
       #figure(caption: "A physical CPU")[
-        #image("../../images/cpu.png", width: 3cm)]],
+        #image("/assets/notes/cpu.png", width: 3cm)]],
   ],
 )
 
