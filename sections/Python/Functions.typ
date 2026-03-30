@@ -87,9 +87,9 @@ The return value is also what comes after the *return* keyword.
 
 We can describe this function as follows:
 
-- This function is called `calculate_hypotheneuse`.
+- This function is called `calculate_hypotenuse`.
 - It takes two parameters: AB and AC, which are supposed to be either int's or floats.
-- It returns the hypotheneuse of the triangle ABC.
+- It returns the hypotenuse of the triangle ABC.
 
 === Functions to be aware of
 
@@ -129,7 +129,7 @@ Output to the standard output (simplified).
   ```python
   int(123.45) # 123
   int("123") # 123
-  int("01110011", base=2) # 155
+  int("01110011", base=2) # 115
   ```.text,
   lang: "Python",
 )
@@ -172,6 +172,7 @@ Library functions are functions that are provided by libraries, and can't be use
   math.cos(math.pi) # -1.0
   math.sin(math.pi / 2) # 1.0
   math.sqrt(4) # 2
+  math.fabs(-2.0) # 2.0
   ```.text,
   lang: "python",
 )

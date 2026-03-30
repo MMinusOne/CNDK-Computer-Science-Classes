@@ -59,7 +59,7 @@
     )
 
     3. The solution's time complexity is $O(n)$: Because the amount of instructions scale linearly ($y = a x + b$) with the input's size. \
-      The solution's space complexity is $O(1)$: Because we are only storing constant data regardless of input size).
+      The solution's space complexity is $O(1)$: Because we are only storing constant data regardless of input size.
 ]
 
 #v(1cm)
@@ -94,8 +94,8 @@
     - We must make a function that accepts two parameters: `nums` and `k`.
     - We will make a dict of numbers we have seen already, the keys will be numbers we've seen and the values will be indices.
     - We will loop over `nums`, accessing `i` and `nums[i]`.
-    - Assuming we have `nums[i]`, `c = k - nums[i]` will be the number we need such that `nums[i] + c = k`, we will calculate that compliment `c`.
-    - If the compliment is inside the dict, then we can return the index of the compliment and `i`. (In other words, if the number $c$ we need for `c + nums[i] = k` is inside the dict, we will return the indices of it and $i$).
+    - Assuming we have `nums[i]`, `c = k - nums[i]` will be the number we need such that `nums[i] + c = k`, we will calculate that complement `c`.
+    - If the complement is inside the dict, then we can return the index of the complement and `i`. (In other words, if the number $c$ we need for `c + nums[i] = k` is inside the dict, we will return the indices of it and $i$).
 
   2. #code-block(
       ```python
@@ -104,10 +104,10 @@
 
           for i in range(len(nums)):
               num = nums[i]
-              compliment = k - nums[i]
+              complement = k - nums[i]
 
-              if compliment in seen:
-                  j = seen[compliment]
+              if complement in seen:
+                  j = seen[complement]
                   return [i, j]
 
               seen[num] = i
@@ -141,7 +141,7 @@
       lang: "python",
     )
 
-    3. The time complexity of the algorithm is: $O(n^2)$: The function scales quadratically with it's input. \
+    3. The time complexity of the algorithm is: $O(n^2)$: The function scales quadratically with its input. \
       The space complexity of the algorithm is: $O(1)$: We are only storing constant data.
 ]
 
@@ -246,7 +246,7 @@
     )
 
     3. This algorithm has a time complexity of: $O(n)$: Because instructions increase linearly with input size. \
-      And has a space complexity of: $O(1)$: Because the amount of data we are storing is not proportional and independant of the input size.
+      And has a space complexity of: $O(1)$: Because the amount of data we are storing is not proportional and independent of the input size.
 
     *Note*: We could of also solved this using a full circle with `randrange`.
 ]
@@ -366,7 +366,7 @@
   - *Volume of a cuboid*: $a_c = "width" * "height" * "length"$, where $l$ is the length, $w$ is the width, and $h$ is the height.
 
 
-  For this exercise, we will take $a = 2.5 "units"$, $b = 1.5 "unit"$, $c = 1 "unit"$ for our ellipsoid.
+  For this exercise, we will take $a = 2.5 "units"$, $b = 1.5 "units"$, $c = 1 "unit"$ for our ellipsoid.
 
   To use Monte Carlo methods in geometry, we need the proportion of points in a shape inside another shape, so let's consider a cuboid(3-D rectangle) around the ellipsoid.
 
@@ -460,12 +460,12 @@
 ]
 
 #exercise(title: "Estimate the area of a superellipse using Monte Carlo methods")[
-  *Equation for a superellipse*: $|x/a|^n + |y/n|^n = 1$,  where $a$ is the x-stretch, and $b$ is the y-stretch.
-  *Point P(x_p, y_p) inside the superellipse*: $|x/a|^n + |y/n|^n <= 1$
-  *Point P(x_p, y_p) outside the superellipse*: $|x/a|^n + |y/n|^n > 1$
+  *Equation for a superellipse*: $|x/a|^n + |y/b|^n = 1$,  where $a$ is the x-stretch, and $b$ is the y-stretch. \
+  *Point $P(x_p, y_p)$ inside the superellipse*: $|x/a|^n + |y/b|^n <= 1$ \
+  *Point $P(x_p, y_p)$ outside the superellipse*: $|x/a|^n + |y/b|^n > 1$ \
   *Area of a rectangle*:  $a_r = "length" * "width"$
 
-  Take $a = 1$  and $b = 2$ for the superellipse.
+  Take $a = 1$, $b = 2$ and $n = 1.5$ for the superellipse.
 
   Find the area of the superellipse using monte carlo methods.
 
@@ -494,8 +494,43 @@
 
   Now we can make the strategy:
 
-
+  - First we need to import the `math` and `random` libraries since we need their functionalities.
+  - Then, we make the `solution` function, that accepts `number_of_points`, which is the number of random points to be generated.
+  - Then, we make our accumulator variable `points_in_superellipse`.
+  - Then we can define our constants $a$, $b$, and $n$.
+  - Then we can loop over `range(n)` and generate a random $x_p$ and $y_p$ each time.
+  - Then we can compute the formula  $|x/a|^n + |y/b|^n <= 1$, for each point.
+  - If the point is inside the superellipse, then we can increment the accumulator, otherwise do nothing.
+  - In the end, we can return our derived formula $"points in the superellipse" / "points in the rectangle" * 8$.
 
   2.
-  3.
+    #code-block(
+      ```python
+          import random
+      import math
+
+      def solution(number_of_points):
+          points_in_superellipse = 0
+
+          a = 1
+          b = 2
+          n = 1.5
+          rectangle_area = 8
+
+          for i in range(number_of_points):
+              x_p = random.uniform(-a, a)
+              y_p = random.uniform(-b, b)
+
+              distance = (math.fabs(x_p/a) ** n) + (math.fabs(y_p/b) ** n)
+
+              if distance <= 1:
+                  points_in_superellipse += 1
+
+          return (points_in_superellipse / number_of_points) * rectangle_area
+      ```.text,
+      lang: "python",
+    )
+
+    3. This algorithm has a time complexity of: $O(n)$: Because instructions increase linearly with input size. \
+      And has a space complexity of: $O(1)$: Because the amount of data we are storing is not proportional and independant of the input size.
 ]

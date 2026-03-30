@@ -75,26 +75,6 @@
   )
 }
 
-=== Comparison operators
-
-#table(
-  columns: (auto, 1fr, auto),
-  align: (center, left, center),
-  fill: (x, y) => tableStripes(x, y),
-  stroke: 1pt + secondary_color,
-  inset: 8pt,
-
-  [#text(fill: white, weight: "bold")[Operator]],
-  [#text(fill: white, weight: "bold")[Name]],
-  [#text(fill: white, weight: "bold")[Example]],
-
-  [#text(size: 14pt, weight: "bold")[`==`]], [Equality], [`10 == 10` → `True`],
-  [#text(size: 14pt, weight: "bold")[`!=`]], [Inequality], [`10 != 5` → `True`],
-  [#text(size: 14pt, weight: "bold")[`>`]], [Greater than], [`10 > 5` → `True`],
-  [#text(size: 14pt, weight: "bold")[`<`]], [Less than], [`10 < 5` → `False`],
-  [#text(size: 14pt, weight: "bold")[`>=`]], [Greater or equal], [`10 >= 10` → `True`],
-  [#text(size: 14pt, weight: "bold")[`<=`]], [Less or equal], [`5 <= 10` → `True`],
-)
 
 #table(
   columns: (1fr, 1fr, 1fr, 1fr, 1fr, 1fr),
@@ -197,7 +177,7 @@ Example:
 === Operation + Assignment By Examples
 
 
-All the arithmetic, and bitshift operators have an assignment equivelant used to modify variables.
+All the arithmetic, and bitshift operators have an assignment equivalent used to modify variables.
 
 
 #code-block(

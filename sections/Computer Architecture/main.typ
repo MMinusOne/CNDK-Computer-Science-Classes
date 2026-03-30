@@ -2,7 +2,7 @@
 
 == Introduction
 
-Computer architecture is the structure of a computer system made from components parts.
+Computer architecture is the structure of a computer system made from component parts.
 
 #include "CPU.typ"
 #include "Memory.typ"

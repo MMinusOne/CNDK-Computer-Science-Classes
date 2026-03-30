@@ -10,7 +10,7 @@ Loops are used for repeated actions.
   ```python
   accumulator = 0 # A variable that accumulates
 
-  for current_number in range(0, 10): # A loop over the range 0 to 10 (10 exclusive), and current_number is how many loops we have made so far
+  for current_number in range(0, 10): # A loop over the range 0 to 10 (10 exclusive), and current_number is the current value from the range
     accumulator += current_number # Mutating accumulator and adding current_number to it
   ```.text,
   lang: "python",
