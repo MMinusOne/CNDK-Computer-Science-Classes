@@ -506,7 +506,7 @@
   2.
     #code-block(
       ```python
-          import random
+      import random
       import math
 
       def solution(number_of_points):
