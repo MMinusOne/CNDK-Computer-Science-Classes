@@ -72,8 +72,8 @@
   *Function E*:
   #code-block(
     ```python
-    def vector(x_a, x_b, y_a, y_b):
-      x_ab = x_b = x_a
+    def vector(x_a, y_a, x_b, y_b):
+      x_ab = x_b - x_a
       y_ab = y_b - y_a
 
       return [x_ab, y_ab]
@@ -82,6 +82,36 @@
   )
 
   1. Describe the functionality of each of these functions
+]
+
+#solution()[
+  1. \
+    *A)*
+    - This function is called `circle_area`, and takes in a parameter `radius`.
+    - It uses the formula $A = pi r^2$ to calculate the circle's area.
+    - Then it returns the area
+    *B*
+    - This function is called `list_summation`, and takes in a parameter `num_list`
+    - It then makes a variable that will hold the sum of all numbers in the list
+    - It then loops over each number in the list, adding it to that holder variable
+    - And finally, returns the sum
+    *C*:
+    - This function is called `smallest_in_list`, and accepts a parameter `num_list`
+    - It then creates a variable for the smallest number
+    - It then loops over each number in the list
+      - If there is no smallest number yet, then the smallest number is the current number
+      - If there is a smallest number, and it's bigger than the current number, than the current number is the new smallest number
+    - Then it returns the smallest number
+    *D*:
+    - This function is called `solve_quadratic` and accepts three parameters `a`, `b` and `c`.
+    - It then uses the formula $Delta = b^2 - 4a c$ and holds the delta in a variable
+      - If $Delta >= 0$, then it calculates the two (or double) roots of the equation and returns them in a list.
+      - Else ($Delta < 0$), it will return the string "No real solutions"
+    *E*:
+    - This function is called `vector` and takes in 4 parameters: `x_a`, `y_b`, `x_b`, `y_a`
+    - It will then calculate the difference between `x_a` and `x_b` and hold it in a variable
+    - It will also calculate the difference between `y_a` and `y_b` and hold it in a variable
+    - Finally, it returns the two variables in a list
 ]
 
 #exercise(title: "An algorithm that satisfies: nums[i] - 10 = k")[
