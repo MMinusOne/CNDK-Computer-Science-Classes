@@ -15,6 +15,75 @@
 
 #pagebreak()
 
+
+#exercise(title: "Describe the following functions")[
+  *Function A*:
+  #code-block(
+    ```python
+    def circle_area(radius):
+      return 3.14 * (radius**2)
+    ```.text,
+    lang: "python",
+  )
+  *Function B*:
+  #code-block(
+    ```python
+    def list_summation(num_list):
+      sum = 0
+
+      for num in num_list:
+        sum += num
+
+      return sum
+    ```.text,
+    lang: "python",
+  )
+  *Function C*:
+  #code-block(
+    ```python
+    def smallest_in_list(num_list):
+      smallest = None
+
+      for num in num_list:
+        if smallest == None:
+          smallest = num
+        elif num < smallest:
+          smallest = num
+
+      return smallest
+    ```.text,
+    lang: "python",
+  )
+  *Function D*:
+  #code-block(
+    ```python
+    def solve_quadratic(a, b, c):
+      delta = (b**2) - (4 * a * c)
+
+      if delta >= 0:
+        x_1 = (-b - delta**0.5) / (2 * a)
+        x_2 = (-b + delta**0.5) / (2 * a)
+        return [x_1, x_2]
+      else:
+        return "No real solutions"
+    ```.text,
+    lang: "python",
+  )
+  *Function E*:
+  #code-block(
+    ```python
+    def vector(x_a, x_b, y_a, y_b):
+      x_ab = x_b = x_a
+      y_ab = y_b - y_a
+
+      return [x_ab, y_ab]
+    ```.text,
+    lang: "python",
+  )
+
+  1. Describe the functionality of each of these functions
+]
+
 #exercise(title: "An algorithm that satisfies: nums[i] - 10 = k")[
   Suppose we have a list `nums` and a constant $k$.
 
@@ -534,3 +603,4 @@
     3. This algorithm has a time complexity of: $O(n)$: Because instructions increase linearly with input size. \
       And has a space complexity of: $O(1)$: Because the amount of data we are storing is not proportional and independant of the input size.
 ]
+
