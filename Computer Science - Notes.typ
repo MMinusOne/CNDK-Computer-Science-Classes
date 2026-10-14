@@ -1,8 +1,6 @@
 #import "templates.typ": *
 
 
-
-
 #set page(
   paper: "a4",
   margin: (x: 1.8cm),
@@ -46,6 +44,7 @@
 
 #include "sections/Computer Architecture/main.typ"
 #include "sections/Python/main.typ"
+#include "sections/Complexity/main.typ"
 // #include "sections/Miscellaneous/main.typ"
 
 \ \ \ \ \ \ \

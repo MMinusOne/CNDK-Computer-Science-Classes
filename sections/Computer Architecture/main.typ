@@ -8,3 +8,4 @@ Computer architecture is the structure of a computer system made from component 
 #include "Memory.typ"
 #include "Data Sizes.typ"
 #include "Number Systems.typ"
+#include "Logic Gates.typ"

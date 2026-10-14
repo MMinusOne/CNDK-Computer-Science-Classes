@@ -62,18 +62,18 @@ The return value is also what comes after the *return* keyword.
     A deterministic function is a function that returns the same outputs for the same inputs, and has no randomness in the determination of future states.
   ],
 
-  [Pure Function],
-  [
-    A pure function is a function that obeys two properties:
-    - It is deterministic
-    - The function has no side effect, meaning no mutation of non-local variables.
-  ],
+  // [Pure Function],
+  // [
+  //   A pure function is a function that obeys two properties:
+  //   - It is deterministic
+  //   - The function has no side effect, meaning no mutation of non-local variables.
+  // ],
 )
 
-=== Generator Functions
+// === Generator Functions
 
-=== Function signature & body
-\ \ \
+// === Function signature & body
+// \ \ \
 === Using functions to calculate the hypotenuse of a right triangle ABC
 
 #code-block(
@@ -105,21 +105,21 @@ Output to the standard output (simplified).
   lang: "Python",
 )
 
-==== input
+// ==== input
 
-#text-block()[
-  If the prompt argument is present, it is written to standard output, the function then reads a line from input and converts it to a string.
-]
+// #text-block()[
+//   If the prompt argument is present, it is written to standard output, the function then reads a line from input and converts it to a string.
+// ]
 
-#code-block(
-  ```python
-  >>> s = input("--> ")
-  --> Monty Python's Flying Circus
-  >>> s
-  "Monty Python's Flying Circus"
-  ```.text,
-  lang: "Python",
-)
+// #code-block(
+//   ```python
+//   >>> s = input("--> ")
+//   --> Monty Python's Flying Circus
+//   >>> s
+//   "Monty Python's Flying Circus"
+//   ```.text,
+//   lang: "Python",
+// )
 
 ==== int
 
@@ -134,22 +134,22 @@ Output to the standard output (simplified).
   lang: "Python",
 )
 
-==== len
+// ==== len
 
-Returns the length (the number of items) of an object. The argument may be a sequence (such as a string, list or range), or a collection (like a dict).
+// Returns the length (the number of items) of an object. The argument may be a sequence (such as a string, list or range), or a collection (like a dict).
 
-#code-block(
-  ```python
-  len("Hello") # 5
-  len([1,2,3,4]) # 4
-  len(range(3, 6)) # 3
-  len({
-   "key_1": "value_1",
-   "key_2": "value_2"
-  }) # 2
-  ```.text,
-  lang: "python",
-)
+// #code-block(
+//   ```python
+//   len("Hello") # 5
+//   len([1,2,3,4]) # 4
+//   len(range(3, 6)) # 3
+//   len({
+//    "key_1": "value_1",
+//    "key_2": "value_2"
+//   }) # 2
+//   ```.text,
+//   lang: "python",
+// )
 
 ==== range
 
@@ -158,36 +158,36 @@ We will consider valid arguments to be integers.
 
 Refer to #ref(<Loops>, supplement: "Loops") to know how to use it.
 
-=== Standard Libraries & Functions/Properties to be aware of
+// === Standard Libraries & Functions/Properties to be aware of
 
-Library functions are functions that are provided by libraries, and can't be used without importing them.
+// Library functions are functions that are provided by libraries, and can't be used without importing them.
 
-==== math library
+// ==== math library
 
-#code-block(
-  ```python
-  import math
+// #code-block(
+//   ```python
+//   import math
 
-  math.pi # 3.14.......
-  math.cos(math.pi) # -1.0
-  math.sin(math.pi / 2) # 1.0
-  math.sqrt(4) # 2
-  math.fabs(-2.0) # 2.0
-  ```.text,
-  lang: "python",
-)
+//   math.pi # 3.14.......
+//   math.cos(math.pi) # -1.0
+//   math.sin(math.pi / 2) # 1.0
+//   math.sqrt(4) # 2
+//   math.fabs(-2.0) # 2.0
+//   ```.text,
+//   lang: "python",
+// )
 
-==== random library
+// ==== random library
 
-#code-block(
-  ```python
-    import random
+// #code-block(
+//   ```python
+//     import random
 
-    random.random() # Returns a number between 0 and 1
-    random.randint(a, b) # Returns a random integer N such that a <= N <= b
-    randon.randrange(start, stop, ?step=1) # Returns a randomly selected element from range(start, stop, step)
-    random.uniform(start, stop) # Returns a random float between start and stop
-  ```.text,
-  lang: "python",
-)
+//     random.random() # Returns a number between 0 and 1
+//     random.randint(a, b) # Returns a random integer N such that a <= N <= b
+//     randon.randrange(start, stop, ?step=1) # Returns a randomly selected element from range(start, stop, step)
+//     random.uniform(start, stop) # Returns a random float between start and stop
+//   ```.text,
+//   lang: "python",
+// )
 

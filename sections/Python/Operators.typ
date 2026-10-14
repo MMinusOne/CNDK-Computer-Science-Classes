@@ -61,7 +61,7 @@
 
 #v(1em)
 
-=== Logical Operators
+=== Logical Operators On A Truth Table
 #let truthTableCase = (p: bool, q: bool) => {
   return (
     (
@@ -113,66 +113,66 @@
 
 #v(1em)
 
-=== Membership Operators
+// === Membership Operators
 
-#table(
-  columns: (auto, 1fr, auto),
-  align: (center, left, center),
-  fill: (x, y) => tableStripes(x, y),
-  stroke: 1pt + secondary_color,
-  inset: 8pt,
+// #table(
+//   columns: (auto, 1fr, auto),
+//   align: (center, left, center),
+//   fill: (x, y) => tableStripes(x, y),
+//   stroke: 1pt + secondary_color,
+//   inset: 8pt,
 
-  [#text(fill: white, weight: "bold")[Operator]],
-  [#text(fill: white, weight: "bold")[Explanation]],
-  [#text(fill: white, weight: "bold")[Example]],
+//   [#text(fill: white, weight: "bold")[Operator]],
+//   [#text(fill: white, weight: "bold")[Explanation]],
+//   [#text(fill: white, weight: "bold")[Example]],
 
-  [#text(size: 14pt, weight: "bold")[`in`]],
-  [Used to check if a certain key is inside a dictionary, returns a bool],
-  [
-    ```python "name" in {"name": "John"}``` $->$  `True`\ because key "name" exists in the dict \
-    ```python "age" in {"name": "John"}``` $->$  `False`\ because key "age" does not exists in the dict
-  ],
+//   [#text(size: 14pt, weight: "bold")[`in`]],
+//   [Used to check if a certain key is inside a dictionary, returns a bool],
+//   [
+//     ```python "name" in {"name": "John"}``` $->$  `True`\ because key "name" exists in the dict \
+//     ```python "age" in {"name": "John"}``` $->$  `False`\ because key "age" does not exists in the dict
+//   ],
 
-  [#text(size: 14pt, weight: "bold")[`not in`]],
-  [Used to check if a certain key is not inside a dictionary, returns a bool],
-  [ ```python "name" not in {"name": "John"}``` $->$  `False`\ because key "name" exists in the dict \
-    ```python "age" not in {"name": "John"}``` $->$  `True`\ because key "age" does not exists in the dict],
-)
+//   [#text(size: 14pt, weight: "bold")[`not in`]],
+//   [Used to check if a certain key is not inside a dictionary, returns a bool],
+//   [ ```python "name" not in {"name": "John"}``` $->$  `False`\ because key "name" exists in the dict \
+//     ```python "age" not in {"name": "John"}``` $->$  `True`\ because key "age" does not exists in the dict],
+// )
 
-#v(1em)
+// #v(1em)
 
-=== Bitshift operators
+// === Bitshift operators
 
-- 9 .) Left-bitshift (`<<`): `x << n`, where `x` and `n` are `int`s, will shift the bits of `x` by `n` zeroes and return the base-10 `int`.
+// - 9 .) Left-bitshift (`<<`): `x << n`, where `x` and `n` are `int`s, will shift the bits of `x` by `n` zeroes and return the base-10 `int`.
 
-Example:
+// Example:
 
-#block(
-  fill: block_bg_color,
-  inset: 12pt,
-  radius: 4pt,
-  width: 100%,
-)[
-  - `5 << 2`:
-  - We convert 5 to base-2: $(5)_10 = (101)_2$.
-  - And left shift by 2: `(10100)` (We added two zeroes.)
-  - Now if we convert back to base-10, the number becomes: $2^2 + 2^4 = 20$.
-]
-- 10 .) Right-bitshift (`>>`): The inverse of left-bitshift.
+// #block(
+//   fill: block_bg_color,
+//   inset: 12pt,
+//   radius: 4pt,
+//   width: 100%,
+// )[
+//   - `5 << 2`:
+//   - We convert 5 to base-2: $(5)_10 = (101)_2$.
+//   - And left shift by 2: `(10100)` (We added two zeroes.)
+//   - Now if we convert back to base-10, the number becomes: $2^2 + 2^4 = 20$.
+// ]
+// - 10 .) Right-bitshift (`>>`): The inverse of left-bitshift.
 
-#grid(
-  columns: 2,
-  grid.cell()[
-    Example:
-    - `5 >> 2`
-    - If we convert 5 to base-2: $(5)_10 = (101)_2$.
-    - And right shift by 2: `(001)`, (The `01` that was there moved to somewhere that doesn't exist.)
-    - Now we convert back to base-10, the number becomes: $2^0 = 1$.
-  ],
-  grid.cell()[
-    #figure(caption: "Right bitshift")[#image("/assets/notes/right-bitshift.png")]
-  ],
-)
+// #grid(
+//   columns: 2,
+//   grid.cell()[
+//     Example:
+//     - `5 >> 2`
+//     - If we convert 5 to base-2: $(5)_10 = (101)_2$.
+//     - And right shift by 2: `(001)`, (The `01` that was there moved to somewhere that doesn't exist.)
+//     - Now we convert back to base-10, the number becomes: $2^0 = 1$.
+//   ],
+//   grid.cell()[
+//     #figure(caption: "Right bitshift")[#image("/assets/notes/right-bitshift.png")]
+//   ],
+// )
 
 === Operation + Assignment By Examples
 
