@@ -187,7 +187,7 @@ All the arithmetic, and bitshift operators have an assignment equivalent used to
   first_number = 10
   second_number = 5
   first_string = "John"
-  second_string = "Johhny"
+  second_string = "Johnny"
 
   first_string += " Jason" # first_string will be "John Jason" after that, because "John" + " Jason" = "John Jason".
   second_number -= 6 # second_number will be -1 after that, because 5 - 6 = -1.

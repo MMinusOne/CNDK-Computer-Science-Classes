@@ -40,7 +40,7 @@ We will discuss:
 #grid(
   columns: 2,
   grid.cell(align: left)[
-    - RAM (#strong()[R]andom-#strong()[A]ccess-#strong()[M]emory) is the a type of memory. It's the green sticks I've shown you in class.
+    - RAM (#strong()[R]andom-#strong()[A]ccess-#strong()[M]emory) is a type of memory.
     - RAM is primary memory.
   ],
   grid.cell()[#pad(x: 1cm)[
@@ -54,7 +54,7 @@ We will discuss:
 #grid(
   columns: 2,
   grid.cell()[
-    - HDD (Hard-Disk-Drive) is a type of memory. It's the metal square Ive shown you in class.
+    - HDD (Hard-Disk-Drive) is a type of memory.
 
     - HDD is secondary-memory.
   ],

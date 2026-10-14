@@ -3,7 +3,7 @@
 #grid(
   columns: 2,
   grid.cell(align: left)[
-    - The CPU (#strong()[C]entral-#strong()[P]rocessing-#strong()[U]nit) is the square component we saw in class inside the computer.
+    - The CPU (#strong()[C]entral-#strong()[P]rocessing-#strong()[U]nit).
 
     - It consists of many smaller units that handle different things, but in the explanation we will take, it will only contain an #ref(<ALU>, supplement: "ALU") and a #ref(<CU>, supplement: "CU"), both of their explanations will be simplified.
 
@@ -36,6 +36,6 @@
 
 === CPU Characteristics
 
-- A CPU has a clock speed: the speed of which instructions will execute, and it is a frequency.
+- A CPU has a clock speed: the speed at which cycles will execute, and it is a frequency.
 
 - $1"GHz" = 1 * 10^(9) "Hz"$

@@ -1,7 +1,7 @@
 {
   "type": "excalidraw",
   "version": 2,
-  "source": "https://excalidraw.com",
+  "source": "https://marketplace.visualstudio.com/items?itemName=pomdtr.excalidraw-editor",
   "elements": [
     {
       "id": "8L7ULnpW_GUj8WaiuJvQ8",
@@ -214,7 +214,8 @@
         "fixedPoint": [
           0.1421500376931316,
           0.18181818181818182
-        ]
+        ],
+        "focus": 0
       },
       "endBinding": {
         "elementId": "qPIbsw41LyIbvHOXChnbw",
@@ -222,13 +223,15 @@
         "fixedPoint": [
           0.2616899097621001,
           0.4466564293523357
-        ]
+        ],
+        "focus": 0
       },
       "startArrowhead": null,
       "endArrowhead": "arrow",
       "elbowed": false,
       "moveMidPointsWithElement": false,
-      "created": null
+      "created": null,
+      "lastCommittedPoint": null
     },
     {
       "id": "bdWH_uPAW13dqyFZb7gGO",
@@ -279,7 +282,8 @@
         "fixedPoint": [
           0.2666119770303527,
           0.4479739999404035
-        ]
+        ],
+        "focus": 0
       },
       "endBinding": {
         "elementId": "_cbkOfq40MzOyzSu_eQom",
@@ -287,13 +291,15 @@
         "fixedPoint": [
           0.4846680092727907,
           0.3856174914077794
-        ]
+        ],
+        "focus": 0
       },
       "startArrowhead": null,
       "endArrowhead": "arrow",
       "elbowed": false,
       "moveMidPointsWithElement": false,
-      "created": null
+      "created": null,
+      "lastCommittedPoint": null
     },
     {
       "id": "D-pt3HxdCRAwrkyeqSB_a",
@@ -424,7 +430,8 @@
         "fixedPoint": [
           0.4896882261659908,
           0.38696314973493673
-        ]
+        ],
+        "focus": 0
       },
       "endBinding": {
         "elementId": "qPIbsw41LyIbvHOXChnbw",
@@ -432,13 +439,15 @@
         "fixedPoint": [
           0.5741586721486207,
           0.46115346999787715
-        ]
+        ],
+        "focus": 0
       },
       "startArrowhead": null,
       "endArrowhead": "arrow",
       "elbowed": false,
       "moveMidPointsWithElement": false,
-      "created": null
+      "created": null,
+      "lastCommittedPoint": null
     },
     {
       "id": "pRpoz6F5qzjx0-K3HOmiK",
@@ -534,7 +543,8 @@
       "startArrowhead": null,
       "endArrowhead": null,
       "polygon": true,
-      "created": null
+      "created": null,
+      "lastCommittedPoint": null
     },
     {
       "id": "rJC24FZNElpdMndUcbFul",
@@ -878,7 +888,8 @@
       "startArrowhead": null,
       "endArrowhead": null,
       "polygon": false,
-      "created": null
+      "created": null,
+      "lastCommittedPoint": null
     },
     {
       "id": "jtAU-R0TxdoZ8-vd1hAHZ",
@@ -922,7 +933,8 @@
       "startArrowhead": null,
       "endArrowhead": null,
       "polygon": false,
-      "created": null
+      "created": null,
+      "lastCommittedPoint": null
     },
     {
       "id": "MfvzWRFUQijcfZpS-plrl",
@@ -966,7 +978,8 @@
       "startArrowhead": null,
       "endArrowhead": null,
       "polygon": false,
-      "created": null
+      "created": null,
+      "lastCommittedPoint": null
     },
     {
       "id": "nlbwKgAVLcLTHPnbh8lBF",
@@ -1010,7 +1023,8 @@
       "startArrowhead": null,
       "endArrowhead": null,
       "polygon": false,
-      "created": null
+      "created": null,
+      "lastCommittedPoint": null
     },
     {
       "id": "OtYKrXZjtQHiJMjmgSBdY",
@@ -1054,7 +1068,8 @@
       "startArrowhead": null,
       "endArrowhead": null,
       "polygon": false,
-      "created": null
+      "created": null,
+      "lastCommittedPoint": null
     },
     {
       "id": "g1q8XcJmFbGlKrxwmPAqM",
@@ -1098,7 +1113,8 @@
       "startArrowhead": null,
       "endArrowhead": null,
       "polygon": false,
-      "created": null
+      "created": null,
+      "lastCommittedPoint": null
     },
     {
       "id": "NOu7vipFN6hQu7bXENFeP",
@@ -1145,13 +1161,15 @@
         "fixedPoint": [
           0.5001,
           1
-        ]
+        ],
+        "focus": 0
       },
       "endBinding": null,
       "startArrowhead": null,
       "endArrowhead": "arrow",
       "elbowed": false,
-      "created": null
+      "created": null,
+      "lastCommittedPoint": null
     },
     {
       "id": "QhxQkoNeeq58Nbuw5z1TK",
@@ -1198,13 +1216,15 @@
         "fixedPoint": [
           0.5001,
           1
-        ]
+        ],
+        "focus": 0
       },
       "endBinding": null,
       "startArrowhead": null,
       "endArrowhead": "arrow",
       "elbowed": false,
-      "created": null
+      "created": null,
+      "lastCommittedPoint": null
     },
     {
       "id": "ygbDLcPGYP9wDD-pyXBJa",
@@ -1251,13 +1271,15 @@
         "fixedPoint": [
           0.5001,
           1
-        ]
+        ],
+        "focus": 0
       },
       "endBinding": null,
       "startArrowhead": null,
       "endArrowhead": "arrow",
       "elbowed": false,
-      "created": null
+      "created": null,
+      "lastCommittedPoint": null
     },
     {
       "id": "orhR3fBmPh-caNOLwEFC1",
@@ -1304,13 +1326,15 @@
         "fixedPoint": [
           0.5001,
           1
-        ]
+        ],
+        "focus": 0
       },
       "endBinding": null,
       "startArrowhead": null,
       "endArrowhead": "arrow",
       "elbowed": false,
-      "created": null
+      "created": null,
+      "lastCommittedPoint": null
     },
     {
       "id": "gxjzR3z23D7dNcltuwhi9",
@@ -1396,7 +1420,8 @@
       "startArrowhead": null,
       "endArrowhead": "arrow",
       "elbowed": false,
-      "created": null
+      "created": null,
+      "lastCommittedPoint": null
     },
     {
       "id": "D8uMy_8rEgJ-t0UT-2PGm",
@@ -1777,7 +1802,8 @@
         "fixedPoint": [
           0.925359604965977,
           0.9253596049659305
-        ]
+        ],
+        "focus": 0
       },
       "endBinding": {
         "elementId": "XYnFurE4XkJ14FB0CsqPl",
@@ -1785,12 +1811,14 @@
         "fixedPoint": [
           0.024444444444444446,
           0.5684931506849316
-        ]
+        ],
+        "focus": 0
       },
       "startArrowhead": null,
       "endArrowhead": "arrow",
       "elbowed": false,
-      "created": null
+      "created": null,
+      "lastCommittedPoint": null
     },
     {
       "id": "SX1kvhS5MeV4K1E4Ru_Qy",
@@ -1837,9 +1865,9 @@
     {
       "id": "0RP-XIpfeP9uyWvG1ZE_5",
       "type": "text",
-      "x": 1381.393426602962,
+      "x": 1384.2914063392902,
       "y": 78220.80702942998,
-      "width": 443.62786865234375,
+      "width": 437.8319091796875,
       "height": 45,
       "angle": 0,
       "strokeColor": "black",
@@ -1854,20 +1882,20 @@
       "index": "ak",
       "roundness": null,
       "seed": 1309411,
-      "version": 862,
-      "versionNonce": 1260387395,
+      "version": 864,
+      "versionNonce": 771984072,
       "isDeleted": false,
       "boundElements": [],
-      "updated": 1771456527341,
+      "updated": 1791995955810,
       "link": null,
       "locked": false,
-      "text": "CPU Code(Machine/Code)",
+      "text": "CPU Code(Machine Code)",
       "fontSize": 36,
       "fontFamily": 5,
       "textAlign": "center",
       "verticalAlign": "middle",
       "containerId": "SX1kvhS5MeV4K1E4Ru_Qy",
-      "originalText": "CPU Code(Machine/Code)",
+      "originalText": "CPU Code(Machine Code)",
       "autoResize": true,
       "lineHeight": 1.25,
       "created": null,
@@ -1933,7 +1961,8 @@
         "fixedPoint": [
           0.9272664326234876,
           0.9272664326234331
-        ]
+        ],
+        "focus": 0
       },
       "endBinding": {
         "elementId": "SX1kvhS5MeV4K1E4Ru_Qy",
@@ -1941,12 +1970,14 @@
         "fixedPoint": [
           0.007415254237288135,
           0.5592105263157895
-        ]
+        ],
+        "focus": 0
       },
       "startArrowhead": null,
       "endArrowhead": "arrow",
       "elbowed": false,
-      "created": null
+      "created": null,
+      "lastCommittedPoint": null
     },
     {
       "id": "l8hj02noAP1MB2kZMHAQR",
@@ -2085,7 +2116,8 @@
         "fixedPoint": [
           0.9080403019497939,
           0.9080403019495287
-        ]
+        ],
+        "focus": 0
       },
       "endBinding": {
         "elementId": "l8hj02noAP1MB2kZMHAQR",
@@ -2093,12 +2125,14 @@
         "fixedPoint": [
           0.004255319148936169,
           0.5526315789473685
-        ]
+        ],
+        "focus": 0
       },
       "startArrowhead": null,
       "endArrowhead": "arrow",
       "elbowed": false,
-      "created": null
+      "created": null,
+      "lastCommittedPoint": null
     },
     {
       "id": "3OK_621W_UH0rtMz4bQFH",
@@ -2207,13 +2241,13 @@
       "updated": 1771456648096,
       "link": null,
       "locked": false,
-      "text": "The new code is thrown to the CPU when executed is wanted.",
+      "text": "The new code is thrown to the CPU when execution is wanted.",
       "fontSize": 20,
       "fontFamily": 5,
       "textAlign": "left",
       "verticalAlign": "top",
       "containerId": null,
-      "originalText": "The new code is thrown to the CPU when executed is wanted.",
+      "originalText": "The new code is thrown to the CPU when execution is wanted.",
       "autoResize": true,
       "lineHeight": 1.25,
       "created": null,
@@ -2507,7 +2541,8 @@
         "fixedPoint": [
           0,
           0.5001
-        ]
+        ],
+        "focus": 0
       },
       "endBinding": {
         "elementId": "E7Go_Q0p0cZa1I-UjPc4W",
@@ -2515,13 +2550,15 @@
         "fixedPoint": [
           0.006666666666666667,
           0.3493150684931507
-        ]
+        ],
+        "focus": 0
       },
       "startArrowhead": null,
       "endArrowhead": "arrow",
       "elbowed": false,
       "moveMidPointsWithElement": false,
-      "created": null
+      "created": null,
+      "lastCommittedPoint": null
     },
     {
       "id": "NA1GkJpBNz89i_XzVF1Pj",
@@ -2590,13 +2627,13 @@
       "updated": 1771457540067,
       "link": null,
       "locked": false,
-      "text": "Abstraction Principal",
+      "text": "Abstraction Principle",
       "fontSize": 36,
       "fontFamily": 5,
       "textAlign": "left",
       "verticalAlign": "top",
       "containerId": null,
-      "originalText": "Abstraction Principal",
+      "originalText": "Abstraction Principle",
       "autoResize": true,
       "lineHeight": 1.25,
       "created": null,
@@ -2871,7 +2908,8 @@
       "startArrowhead": null,
       "endArrowhead": null,
       "polygon": false,
-      "created": null
+      "created": null,
+      "lastCommittedPoint": null
     },
     {
       "id": "pcDE35gsDPTctMPTxqDku",
@@ -2915,7 +2953,8 @@
       "startArrowhead": null,
       "endArrowhead": null,
       "polygon": false,
-      "created": null
+      "created": null,
+      "lastCommittedPoint": null
     },
     {
       "id": "cRvSWYpQJmCbsMjqBxowV",
@@ -3115,7 +3154,8 @@
       "startArrowhead": null,
       "endArrowhead": null,
       "polygon": false,
-      "created": null
+      "created": null,
+      "lastCommittedPoint": null
     },
     {
       "id": "CD5rYqKFUsVNaL7LkHrkT",
@@ -3159,7 +3199,8 @@
       "startArrowhead": null,
       "endArrowhead": null,
       "polygon": false,
-      "created": null
+      "created": null,
+      "lastCommittedPoint": null
     },
     {
       "id": "sfEISnk6ftvA2VpaFQpF5",
@@ -3333,7 +3374,8 @@
       "startArrowhead": null,
       "endArrowhead": null,
       "polygon": true,
-      "created": null
+      "created": null,
+      "lastCommittedPoint": null
     },
     {
       "id": "IjASlyzJEbaG9h-86F9ox",
@@ -3497,7 +3539,8 @@
       "startArrowhead": null,
       "endArrowhead": null,
       "polygon": false,
-      "created": null
+      "created": null,
+      "lastCommittedPoint": null
     },
     {
       "id": "wqzBRQxDjDV-c-0TsjBGx",
@@ -3541,7 +3584,8 @@
       "startArrowhead": null,
       "endArrowhead": null,
       "polygon": false,
-      "created": null
+      "created": null,
+      "lastCommittedPoint": null
     },
     {
       "id": "dxAhAhQITUX4P1eTYJR7c",
@@ -3597,7 +3641,8 @@
       "startArrowhead": null,
       "endArrowhead": null,
       "polygon": true,
-      "created": null
+      "created": null,
+      "lastCommittedPoint": null
     },
     {
       "id": "MsuRpGbxG9SJbWXVJwy4_",
@@ -3761,7 +3806,8 @@
       "startArrowhead": null,
       "endArrowhead": null,
       "polygon": false,
-      "created": null
+      "created": null,
+      "lastCommittedPoint": null
     },
     {
       "id": "IlIMtgaHniavoZAGWWAlz",
@@ -3805,7 +3851,8 @@
       "startArrowhead": null,
       "endArrowhead": null,
       "polygon": false,
-      "created": null
+      "created": null,
+      "lastCommittedPoint": null
     },
     {
       "id": "yh9nVdNpYxQ2X4n5qcGxA",
@@ -3861,7 +3908,8 @@
       "startArrowhead": null,
       "endArrowhead": null,
       "polygon": true,
-      "created": null
+      "created": null,
+      "lastCommittedPoint": null
     },
     {
       "id": "8Ppnyre1jBJACbZP5yRH6",
@@ -3905,7 +3953,8 @@
       "startArrowhead": null,
       "endArrowhead": null,
       "polygon": false,
-      "created": null
+      "created": null,
+      "lastCommittedPoint": null
     },
     {
       "id": "9ovO1aOVznp-r9bXMwP98",
@@ -3953,7 +4002,8 @@
       "startArrowhead": null,
       "endArrowhead": "arrow",
       "elbowed": false,
-      "created": null
+      "created": null,
+      "lastCommittedPoint": null
     },
     {
       "id": "DN6IOGbKpYqSolJeulSyR",
@@ -4005,7 +4055,8 @@
       "startArrowhead": null,
       "endArrowhead": "arrow",
       "elbowed": false,
-      "created": null
+      "created": null,
+      "lastCommittedPoint": null
     },
     {
       "id": "gqiDgOv-8RRv1aoHoYjW8",
@@ -4057,7 +4108,8 @@
       "startArrowhead": null,
       "endArrowhead": "arrow",
       "elbowed": false,
-      "created": null
+      "created": null,
+      "lastCommittedPoint": null
     },
     {
       "id": "MCjViAu3xygAznonMgQ9E",
@@ -4181,7 +4233,8 @@
       "startArrowhead": null,
       "endArrowhead": null,
       "polygon": false,
-      "created": null
+      "created": null,
+      "lastCommittedPoint": null
     },
     {
       "id": "4E5x2vcupvFm0ywwfmUZo",
@@ -4443,7 +4496,8 @@
         "fixedPoint": [
           0.1421500376931316,
           0.18181818181818182
-        ]
+        ],
+        "focus": 0
       },
       "endBinding": {
         "elementId": "toPYFKyC8JtD5qxQiFnNI",
@@ -4451,13 +4505,15 @@
         "fixedPoint": [
           0.2616899097621001,
           0.4466564293523357
-        ]
+        ],
+        "focus": 0
       },
       "startArrowhead": null,
       "endArrowhead": "arrow",
       "elbowed": false,
       "moveMidPointsWithElement": false,
-      "created": null
+      "created": null,
+      "lastCommittedPoint": null
     },
     {
       "id": "qPRl_w7TuxVQzTBoRzsR8",
@@ -4508,7 +4564,8 @@
         "fixedPoint": [
           0.2666119770303528,
           0.44797399994039566
-        ]
+        ],
+        "focus": 0
       },
       "endBinding": {
         "elementId": "toPYFKyC8JtD5qxQiFnNI",
@@ -4516,13 +4573,15 @@
         "fixedPoint": [
           0.5767022149302707,
           0.4637848469971155
-        ]
+        ],
+        "focus": 0
       },
       "startArrowhead": null,
       "endArrowhead": "arrow",
       "elbowed": false,
       "moveMidPointsWithElement": true,
-      "created": null
+      "created": null,
+      "lastCommittedPoint": null
     },
     {
       "id": "LeL-OLMnX8z-aYutc_-Er",
@@ -5454,7 +5513,8 @@
       "startArrowhead": null,
       "endArrowhead": "arrow",
       "elbowed": false,
-      "created": null
+      "created": null,
+      "lastCommittedPoint": null
     },
     {
       "id": "n7-eYkkET4muFM4FQgf43",
@@ -6061,7 +6121,8 @@
       "startArrowhead": null,
       "endArrowhead": "arrow",
       "elbowed": false,
-      "created": null
+      "created": null,
+      "lastCommittedPoint": null
     },
     {
       "id": "hx2ojhykJ7Q2lLBY7xyN2",
@@ -6157,7 +6218,8 @@
       "startArrowhead": null,
       "endArrowhead": null,
       "polygon": true,
-      "created": 1791836112852
+      "created": 1791836112852,
+      "lastCommittedPoint": null
     },
     {
       "id": "pKEXP1CCzbkrTi7bwUliC",
@@ -6481,7 +6543,8 @@
       "startArrowhead": null,
       "endArrowhead": null,
       "polygon": false,
-      "created": 1791836112852
+      "created": 1791836112852,
+      "lastCommittedPoint": null
     },
     {
       "id": "2DUww_csFOPp5w28uA_e0",
@@ -6525,7 +6588,8 @@
       "startArrowhead": null,
       "endArrowhead": null,
       "polygon": false,
-      "created": 1791836112852
+      "created": 1791836112852,
+      "lastCommittedPoint": null
     },
     {
       "id": "_CmN4-fjcOTA9v3ILgp8n",
@@ -6569,7 +6633,8 @@
       "startArrowhead": null,
       "endArrowhead": null,
       "polygon": false,
-      "created": 1791836112852
+      "created": 1791836112852,
+      "lastCommittedPoint": null
     },
     {
       "id": "UEQmHyBUc8jgtVaqpN_Cv",
@@ -6613,7 +6678,8 @@
       "startArrowhead": null,
       "endArrowhead": null,
       "polygon": false,
-      "created": 1791836112852
+      "created": 1791836112852,
+      "lastCommittedPoint": null
     },
     {
       "id": "fKv1Ibw-eZHruJ9MBfjNz",
@@ -6657,7 +6723,8 @@
       "startArrowhead": null,
       "endArrowhead": null,
       "polygon": false,
-      "created": 1791836112852
+      "created": 1791836112852,
+      "lastCommittedPoint": null
     },
     {
       "id": "xB8L9IeO81y2zrOB5GfFu",
@@ -6701,7 +6768,8 @@
       "startArrowhead": null,
       "endArrowhead": null,
       "polygon": false,
-      "created": 1791836112852
+      "created": 1791836112852,
+      "lastCommittedPoint": null
     },
     {
       "id": "9erikGkV0RYS8PiwDrGkU",
@@ -6745,7 +6813,8 @@
       "startArrowhead": null,
       "endArrowhead": null,
       "polygon": false,
-      "created": 1791836168549
+      "created": 1791836168549,
+      "lastCommittedPoint": null
     },
     {
       "id": "sUoIWkYvPuVumOTfL5ppn",
@@ -6770,7 +6839,7 @@
       "version": 18,
       "versionNonce": 2077494988,
       "isDeleted": false,
-      "boundElements": null,
+      "boundElements": [],
       "updated": 1791836176248,
       "created": 1791836173829,
       "link": null,
@@ -6829,7 +6898,8 @@
       "startArrowhead": null,
       "endArrowhead": null,
       "polygon": false,
-      "created": 1791836177349
+      "created": 1791836177349,
+      "lastCommittedPoint": null
     },
     {
       "id": "ZrGChxXJ9scJPdTySy9le",
@@ -6854,7 +6924,7 @@
       "version": 37,
       "versionNonce": 287984244,
       "isDeleted": false,
-      "boundElements": null,
+      "boundElements": [],
       "updated": 1791836182960,
       "created": 1791836179242,
       "link": null,
@@ -6896,7 +6966,7 @@
       "version": 282,
       "versionNonce": 28946676,
       "isDeleted": false,
-      "boundElements": null,
+      "boundElements": [],
       "updated": 1791836211526,
       "created": 1791836203788,
       "link": null,
@@ -6919,7 +6989,8 @@
       "endBinding": null,
       "startArrowhead": "triangle",
       "endArrowhead": "triangle",
-      "elbowed": false
+      "elbowed": false,
+      "lastCommittedPoint": null
     },
     {
       "id": "UZzmpzpWBKmwXbB3EyUrF",
@@ -6944,7 +7015,7 @@
       "version": 31,
       "versionNonce": 1084069236,
       "isDeleted": false,
-      "boundElements": null,
+      "boundElements": [],
       "updated": 1791836216389,
       "created": 1791836213545,
       "link": null,
@@ -7009,7 +7080,8 @@
       "endBinding": null,
       "startArrowhead": "triangle",
       "endArrowhead": "triangle",
-      "elbowed": false
+      "elbowed": false,
+      "lastCommittedPoint": null
     },
     {
       "id": "M4ojv1_011oernlIel-In",
@@ -7099,7 +7171,8 @@
       "endBinding": null,
       "startArrowhead": "triangle",
       "endArrowhead": "triangle",
-      "elbowed": false
+      "elbowed": false,
+      "lastCommittedPoint": null
     },
     {
       "id": "_fQFdAZ5YNYg4j543hAoc",
@@ -7263,12 +7336,14 @@
         "fixedPoint": [
           0.49056603773584906,
           1
-        ]
+        ],
+        "focus": 0
       },
       "endBinding": null,
       "startArrowhead": null,
       "endArrowhead": "arrow",
-      "elbowed": false
+      "elbowed": false,
+      "lastCommittedPoint": null
     },
     {
       "id": "YOmLHeulUzuscdJjrbgej",
@@ -7482,7 +7557,8 @@
         "fixedPoint": [
           0.5001,
           1
-        ]
+        ],
+        "focus": 0
       },
       "endBinding": {
         "elementId": "9TVx0ql0E3zZvS3oyyYiA",
@@ -7490,12 +7566,14 @@
         "fixedPoint": [
           0.5139664804469274,
           0.024193548387096774
-        ]
+        ],
+        "focus": 0
       },
       "startArrowhead": null,
       "endArrowhead": "arrow",
       "elbowed": false,
-      "moveMidPointsWithElement": false
+      "moveMidPointsWithElement": false,
+      "lastCommittedPoint": null
     },
     {
       "id": "eFrFDHA4M6uqqxscIycOp",
@@ -7579,7 +7657,8 @@
         "fixedPoint": [
           0.998738317757009,
           0.5069444444444444
-        ]
+        ],
+        "focus": 0
       },
       "endBinding": {
         "elementId": "eFrFDHA4M6uqqxscIycOp",
@@ -7587,12 +7666,14 @@
         "fixedPoint": [
           0.47586440759525184,
           0.5241355924047993
-        ]
+        ],
+        "focus": 0
       },
       "startArrowhead": null,
       "endArrowhead": "arrow",
       "elbowed": false,
-      "moveMidPointsWithElement": false
+      "moveMidPointsWithElement": false,
+      "lastCommittedPoint": null
     },
     {
       "id": "e-ZdUlRL2hk8YwqXSWEg3",
@@ -7718,12 +7799,14 @@
         "fixedPoint": [
           0.4953271028037381,
           0.9722222222222222
-        ]
+        ],
+        "focus": 0
       },
       "endBinding": null,
       "startArrowhead": null,
       "endArrowhead": "arrow",
-      "elbowed": false
+      "elbowed": false,
+      "lastCommittedPoint": null
     },
     {
       "id": "EWyNDNHDoFJBg2iZQSVdb",
@@ -7933,7 +8016,8 @@
         "fixedPoint": [
           0.5046728971962615,
           0.9987326388889213
-        ]
+        ],
+        "focus": 0
       },
       "endBinding": {
         "elementId": "-InJvVHyZJNMAD1KkHN9R",
@@ -7941,12 +8025,14 @@
         "fixedPoint": [
           0.5001,
           0
-        ]
+        ],
+        "focus": 0
       },
       "startArrowhead": null,
       "endArrowhead": "arrow",
       "elbowed": false,
-      "moveMidPointsWithElement": false
+      "moveMidPointsWithElement": false,
+      "lastCommittedPoint": null
     },
     {
       "id": "pfRBacPNPEDgzyHqLjNsy",
@@ -8013,7 +8099,7 @@
       "version": 6,
       "versionNonce": 412024396,
       "isDeleted": false,
-      "boundElements": null,
+      "boundElements": [],
       "updated": 1791836572779,
       "created": 1791836571961,
       "link": null,
@@ -8074,7 +8160,8 @@
         "fixedPoint": [
           0.5001,
           1
-        ]
+        ],
+        "focus": 0
       },
       "endBinding": {
         "elementId": "pfRBacPNPEDgzyHqLjNsy",
@@ -8082,12 +8169,14 @@
         "fixedPoint": [
           0.5001,
           0
-        ]
+        ],
+        "focus": 0
       },
       "startArrowhead": null,
       "endArrowhead": "arrow",
       "elbowed": false,
-      "moveMidPointsWithElement": false
+      "moveMidPointsWithElement": false,
+      "lastCommittedPoint": null
     },
     {
       "id": "8cxhsJYMzU14iy57zLqvW",
@@ -8154,7 +8243,7 @@
       "version": 66,
       "versionNonce": 1013315660,
       "isDeleted": false,
-      "boundElements": null,
+      "boundElements": [],
       "updated": 1791836606256,
       "created": 1791836590003,
       "link": null,
@@ -8175,7 +8264,8 @@
         "fixedPoint": [
           0.0035046728971962603,
           0.5104166666666666
-        ]
+        ],
+        "focus": 0
       },
       "endBinding": {
         "elementId": "8cxhsJYMzU14iy57zLqvW",
@@ -8183,11 +8273,13 @@
         "fixedPoint": [
           1,
           0.5001
-        ]
+        ],
+        "focus": 0
       },
       "startArrowhead": null,
       "endArrowhead": "arrow",
-      "elbowed": false
+      "elbowed": false,
+      "lastCommittedPoint": null
     },
     {
       "id": "nudswR2WJZ95ZKZcL7g_s",
@@ -8212,7 +8304,7 @@
       "version": 76,
       "versionNonce": 547882060,
       "isDeleted": false,
-      "boundElements": null,
+      "boundElements": [],
       "updated": 1791836603632,
       "created": 1791836595613,
       "link": null,
@@ -8252,7 +8344,7 @@
       "version": 187,
       "versionNonce": 86827252,
       "isDeleted": false,
-      "boundElements": null,
+      "boundElements": [],
       "updated": 1791836615006,
       "created": 1791836610748,
       "link": null,
@@ -8277,7 +8369,8 @@
         "fixedPoint": [
           0.49101796407185627,
           0
-        ]
+        ],
+        "focus": 0
       },
       "endBinding": {
         "elementId": "9TVx0ql0E3zZvS3oyyYiA",
@@ -8285,11 +8378,13 @@
         "fixedPoint": [
           0.0012616822429884437,
           0.5069444444444444
-        ]
+        ],
+        "focus": 0
       },
       "startArrowhead": null,
       "endArrowhead": "arrow",
-      "elbowed": false
+      "elbowed": false,
+      "lastCommittedPoint": null
     },
     {
       "id": "SYobm9KEXn99XFzaSIGH5",
@@ -8314,7 +8409,7 @@
       "version": 5,
       "versionNonce": 1803904460,
       "isDeleted": false,
-      "boundElements": null,
+      "boundElements": [],
       "updated": 1791836621324,
       "created": 1791836620268,
       "link": null,
@@ -8354,7 +8449,7 @@
       "version": 250,
       "versionNonce": 1706961868,
       "isDeleted": false,
-      "boundElements": null,
+      "boundElements": [],
       "updated": 1791836627574,
       "created": 1791836624526,
       "link": null,
@@ -8379,7 +8474,8 @@
         "fixedPoint": [
           0.5001,
           1
-        ]
+        ],
+        "focus": 0
       },
       "endBinding": {
         "elementId": "pfRBacPNPEDgzyHqLjNsy",
@@ -8387,19 +8483,20 @@
         "fixedPoint": [
           1,
           0.5001
-        ]
+        ],
+        "focus": 0
       },
       "startArrowhead": null,
       "endArrowhead": "arrow",
-      "elbowed": false
+      "elbowed": false,
+      "lastCommittedPoint": null
     }
   ],
   "appState": {
     "gridSize": 20,
     "gridStep": 5,
     "gridModeEnabled": false,
-    "viewBackgroundColor": "#ffffff",
-    "lockedMultiSelections": {}
+    "viewBackgroundColor": "#ffffff"
   },
   "files": {
     "33b081e0f4f8b044ab0f66f259c210378be19b00": {

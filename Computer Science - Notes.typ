@@ -52,10 +52,9 @@
 = Exam studying methodology <Exam-Studying-Methodology>
 
 - Focus on understanding the concepts before memorizing them, there's not even the need to memorize them.
-- 20% of the event yields 80% of the outcome, don't try and nail all the details, just focus on the most important things.
-- Focus on the English parts of things and try to explain thing to yourself and other people to see if you understand.
+- 20% of the effort yields 80% of the outcome, don't try and nail all the details, just focus on the most important things.
+- Focus on the English parts of things and try to explain things to yourself and other people to see if you understand.
 - Regarding Python, you can try everything each step of the way, read #ref(<Try-It-Yourself>, supplement: "Try it yourself")
-- Ask me in the group if there's any questions, not in private, I won't respond.
 
 \
 \

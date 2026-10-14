@@ -27,9 +27,9 @@ After this, `accumulator` will be $0 + 1 + 2 + 3 + 4 + 5 + 6 + 7 + 8 + 9 = 45$.
   n      = 5
 
   for i in range(0, n): # Looping n times
-    name = names[i] # Accessing the n-th name from the names list
-    grade = str(grades[i]) # Accessing the n-th grade from the grades list, and converting it to a string, the same way we would do with an int(...)
-    print(name + " has a grade of " + grade) # Concatenating (Adding) the strings together to make a sentence, here we see why we turned grade into a "str", because str + int is not possible
+    name = names[i] # Accessing the i-th name from the names list
+    grade = str(grades[i]) # Accessing the i-th grade from the grades list, and converting it to a string
+    print(name + " has a grade of " + grade) # Concatenating (Adding) the strings together to make a sentence, here we see why we turned grade into a "str", because str + int and str + float is not possible
   ```.text,
   lang: "python",
 )

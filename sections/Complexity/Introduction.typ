@@ -46,7 +46,7 @@ $dots$
 
 === Example: Binary Search
 
-For binary search, we will consider the *sorted* $10$-length array $A = [-5, -2, 0, 1, 2, 4, 5, 6, 7, 10]$, and we will start with low = 0, and high = 9, at each point, we will then repeatedly take $"midpoint" = "low" + floor(("high" - "low") / 2)$, and call that point $M$, if $A_m > K$, then $K$ is positioned before position $m$ (the array is sorted), so we will take the left half, otherwise if $A_m < K$, then $K$ is positioned after the position $m$, so we will take the right half, and repeat.
+For binary search, we will consider the *sorted* $10$-length array $A = [-5, -2, 0, 1, 2, 4, 5, 6, 7, 10]$ and $K = 7$, and we will start with low = 0, and high = 9, at each point, we will then repeatedly take $"midpoint" = "low" + floor(("high" - "low") / 2)$, and call that point $M$, if $A_m > K$, then $K$ is positioned before position $m$ (the array is sorted), so we will take the left half, otherwise if $A_m < K$, then $K$ is positioned after the position $m$, so we will take the right half, and repeat.
 
 - This algorithm has $O(log_2 n)$, but is written as simply $O(log n)$ because $2$ is a constant term we don't usually consider, this is because at each step in the algorithm, we cut the amount of work we have to do by half.
 
@@ -85,7 +85,7 @@ $f(n)$ is $O(g(n))$ if there exists a $c > 0$ and an $n_0 > 0$, such that $f(n) 
 ==== Explanation
 
 Big-O describes the "upper-bound" of time an algorithm can take.
-Therefore, Big-O is always greater than or equal to the actual number of steps.
+Therefore, Big-O is always at most $c * g(n)$ for all $n >= n_0$.
 
 There exists other complexity-notations:
 
@@ -124,7 +124,7 @@ There exists other complexity-notations:
     o
   ],
 
-  [ Tight upper bound ],
+  [ Strict upper bound ],
 
   [
     Big-Omega
@@ -144,7 +144,7 @@ There exists other complexity-notations:
     $omega$
   ],
 
-  [ Tight lower Bound ],
+  [ Strict lower bound ],
 
   [
     Big-Theta
@@ -163,11 +163,11 @@ $ x^2 in O(x^2) $
 $ x^2 in O(x^2 + x) $
 $ x^2 in O(200x^2) $
 
-We will only be responsable for *Big-O* in this course.
+We will only be responsible for *Big-O* in this course.
 
 *A tip:* You can look at the highest degree of the function, and already be aware of what time complexity it is .
 
-=== Ways of solving f(n) = O(g(n))
+=== Ways of proving f(n) = O(g(n))
 
 
 
@@ -291,7 +291,7 @@ $ T(o) = T(10^9) = (5(10^9) )/((0.295)(10^9)) approx 16.94 "s" $
 
 It would take 16.94 seconds on a 0.295GHz CPU to execute the algorithm.
 
-Oh the other hand, if we considered *binary search* instead with: $N = 10^9$, we would have an upper bound of: $ o' = log_2 N = log_2 10^9 approx 30 $
+On the other hand, if we considered *binary search* instead with: $N = 10^9$, we would have an upper bound of: $ o' = log_2 N = log_2 10^9 approx 30 $
 
 And so:
 $ T(o') = T(log_2 N) = (5(log_2 10^9))/((0.295)(10^9)) approx 5 * 10^(-7) "s" approx 0.0000005 "s" $

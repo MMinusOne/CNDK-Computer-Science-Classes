@@ -2,7 +2,7 @@
 
 == Functions
 
-Functions should be thought as machines that take an input and give us an output.
+Functions should be thought of as machines that take an input and give us an output.
 
 #figure(caption: "Function diagram")[
   #image("/assets/notes/Functions-definition.svg", width: 30em)
@@ -88,7 +88,7 @@ The return value is also what comes after the *return* keyword.
 We can describe this function as follows:
 
 - This function is called `calculate_hypotenuse`.
-- It takes two parameters: AB and AC, which are supposed to be either int's or floats.
+- It takes two parameters: AB and AC, which are supposed to be either ints or floats.
 - It returns the hypotenuse of the triangle ABC.
 
 === Functions to be aware of

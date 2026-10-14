@@ -8,15 +8,15 @@
 
 - It's made up of 10 digits, digits from (0 to 9): 0, 1, 2, 3, 4, 5, 6, 7, 8, 9.
 
-- Any other number is made up from these the 10 digits.
+- Any other number is made up from these `10` digits.
 
 === Base-2 <Base-2>
 
-- Base-2 is the number system is computers use.
+- Base-2 is the number system computers use.
 
 - It's made up of two digits: `0` and `1`.
 
-- Any other number is made up from these the `2` digits.
+- Any other number is made up from these `2` digits.
 
 === Relationship between base-2 and base-10
 
@@ -46,6 +46,8 @@ Numbers can be converted to-and-back from base-2 to base-10.
         *Step 3:* If the number is a decimal, take everything before the decimal and assign it the bit `1`; if the number is a whole number, write the number as is and assign it the bit `0`.
 
         *Step 4:* Construct the number by reading the bits from bottom to top.
+
+        *Step 5:* If the number is now less than 1, record it, and stop.
       ]
     ]
 

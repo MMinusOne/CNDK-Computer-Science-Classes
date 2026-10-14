@@ -42,6 +42,10 @@
 
   image(bytes(svg), format: "svg", width: width)
 }
+\
+\
+\
+\
 
 == Logic gates
 
@@ -65,6 +69,10 @@ From these we can build the derived gates: NAND, NOR, XOR. NAND and NOR are also
   )
 ]
 
+==== De Morgan's Law
+
+$X = not(A and B) equiv not A or not B$
+
 === NOT
 
 #grid(
@@ -79,8 +87,8 @@ From these we can build the derived gates: NAND, NOR, XOR. NAND and NOR are also
 
     - The *NOT* gate outputs the complement of A, meaning 0 if A is 1, and 1 if A is 0.
 
-    - We will denote the operation: $not A = X$
-    - We can also denote the operation with a bar: $overline(A) = X$
+    - We will denote the operation: $not A = O_1$
+    - We can also denote the operation with a bar: $overline(A) = O_1$
   ],
   grid.cell()[
     #pad(left: 2cm)[#figure(caption: "NOT")[#gate-svg("NOT", inputs: 1)] <NOT>]
@@ -101,7 +109,7 @@ From these we can build the derived gates: NAND, NOR, XOR. NAND and NOR are also
 
     - The *AND* gate outputs 0 for all pairs of (A, B), except when both *A* AND *B* are 1.
 
-    - We will denote the operation: $A and B = X$
+    - We will denote the operation: $A and B = O_1$
   ],
   grid.cell()[
     #pad(left: 2cm)[#figure(caption: "AND")[#gate-svg("AND")] <AND>]
@@ -122,7 +130,7 @@ From these we can build the derived gates: NAND, NOR, XOR. NAND and NOR are also
 
     - The *NAND* gate outputs the opposite of what an AND gate would produce for a pair (A, B).
 
-    - We will denote the operation: $not (A and B) = X$
+    - We will denote the operation: $not (A and B) = O_1$
   ],
   grid.cell()[
     #pad(left: 2cm)[#figure(caption: "NAND")[#gate-svg("NAND")] <NAND>]
@@ -143,7 +151,7 @@ From these we can build the derived gates: NAND, NOR, XOR. NAND and NOR are also
 
     - The *OR* gate outputs 1 if *A* OR *B* (or both) is 1, and 0 only when both are 0.
 
-    - We will denote the operation: $A or B = X$
+    - We will denote the operation: $A or B = O_1$
   ],
   grid.cell()[
     #pad(left: 2cm)[#figure(caption: "OR")[#gate-svg("OR")] <OR>]
@@ -166,12 +174,16 @@ From these we can build the derived gates: NAND, NOR, XOR. NAND and NOR are also
 
     - The *NOR* gate outputs the opposite of what an OR gate would produce for a pair (A, B), meaning it outputs 1 only when both *A* and *B* are 0.
 
-    - We will denote the operation: $not (A or B) = X$
+    - We will denote the operation: $not (A or B) = O_1$
   ],
   grid.cell()[
     #pad(left: 2cm)[#figure(caption: "NOR")[#gate-svg("NOR")] <NOR>]
   ],
 )
+
+==== De Morgan's Law
+
+$X = not(A or B) equiv not A and not B$
 
 === XOR
 
@@ -187,7 +199,7 @@ From these we can build the derived gates: NAND, NOR, XOR. NAND and NOR are also
 
     - The *XOR* gate outputs 1 when *A* and *B* are different, and 0 when they are the same. Unlike OR, it outputs 0 when both inputs are 1.
 
-    - We will denote the operation: $A xor B = X$
+    - We will denote the operation: $A xor B = O_1$
   ],
   grid.cell()[
     #pad(left: 2cm)[#figure(caption: "XOR")[#gate-svg("XOR")] <XOR>]
