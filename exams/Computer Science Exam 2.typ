@@ -145,23 +145,23 @@ For each of the functions below, determine/identify the following:
 
 
 #image("Python5.png", height: 6em)
-// 4-)
+4-)
 
-// #grid(
-//   columns: 2,
-//   grid.cell()[
-//     4.1-) What is the main purpose of time complexity analysis? \
-//     4.2-) What is the theoretical minimum time \ complexity of finding the i-th largest element \
-//     4.3-) How many steps would an algorithm with \ $O(N^3)$ complexity take, \ where N is the number of data?
-//   ],
+#grid(
+  columns: 2,
+  grid.cell()[
+    4.1-) What is the main purpose of time complexity analysis? \
+    4.2-) What is the theoretical minimum time \ complexity of finding the i-th largest element \
+    4.3-) How many steps would an algorithm with \ $O(N^3)$ complexity take, \ where N is the number of data?
+  ],
 
-//   grid.cell()[
-//     #figure(caption: "Time complexity analysis by Adita Chatarjee")[
-//       #align()[
-//         #image("text3.png", height: 11cm, width: 12cm)
-//       ]
-//     ]
-//   ],
-// )
+  grid.cell()[
+    #figure(caption: "Time complexity analysis by Adita Chatarjee")[
+      #align()[
+        #image("text3.png", height: 11cm, width: 12cm)
+      ]
+    ]
+  ],
+)
 
 

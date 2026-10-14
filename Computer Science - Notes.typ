@@ -45,7 +45,7 @@
 #include "sections/Computer Architecture/main.typ"
 #include "sections/Python/main.typ"
 #include "sections/Complexity/main.typ"
-// #include "sections/Miscellaneous/main.typ"
+#include "sections/Miscellaneous/main.typ"
 
 \ \ \ \ \ \ \
 

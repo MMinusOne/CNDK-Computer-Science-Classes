@@ -62,12 +62,12 @@ The return value is also what comes after the *return* keyword.
     A deterministic function is a function that returns the same outputs for the same inputs, and has no randomness in the determination of future states.
   ],
 
-  // [Pure Function],
-  // [
-  //   A pure function is a function that obeys two properties:
-  //   - It is deterministic
-  //   - The function has no side effect, meaning no mutation of non-local variables.
-  // ],
+  [Pure Function],
+  [
+    A pure function is a function that obeys two properties:
+    - It is deterministic
+    - The function has no side effect, meaning no mutation of non-local variables.
+  ],
 )
 
 // === Generator Functions

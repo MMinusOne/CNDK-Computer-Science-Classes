@@ -57,28 +57,3 @@
   5. $(1103)_2 = (10001001111)_10$, and since the base-2 version has 11 bits, it will require 11 bits to store.
 ]
 
-#v(1cm)
-
-#exercise(title: "CPU - Questions From The Text")[]
-
-#solution()[]
-
-#v(1cm)
-
-#exercise(title: "ALU - Questions From The Text")[]
-
-#solution()[]
-
-#v(1cm)
-
-#exercise(title: "CU - Questions From The Text")[]
-
-#solution()[]
-
-#v(1cm)
-
-#exercise(title: "Memory - Questions From The Text")[]
-
-#solution()[]
-
-

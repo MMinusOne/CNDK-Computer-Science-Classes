@@ -1,5 +1,5 @@
 // ---------- page setup ----------
-#set page(paper: "a4", margin: (x: 1.5cm, y: 1.5cm))
+// #set page(paper: "a4", margin: (x: 1.5cm, y: 1.5cm))
 #set text(size: 10pt)
 
 // ---------- toggle this to print the solutions ----------
