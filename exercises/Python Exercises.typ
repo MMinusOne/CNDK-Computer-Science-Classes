@@ -29,12 +29,12 @@
   #code-block(
     ```python
     def list_summation(num_list):
-      sum = 0
+      summation = 0
 
       for num in num_list:
-        sum += num
+        summation += num
 
-      return sum
+      return summation
     ```.text,
     lang: "python",
   )
@@ -140,7 +140,7 @@
       - If $Delta >= 0$, then it calculates the two (or double) roots of the equation and returns them in a list.
       - Else ($Delta < 0$), it will return the string "No real solutions"
     *E*:
-    - This function is called `vector` and takes in 4 parameters: `x_a`, `y_b`, `x_b`, `y_a`
+    - This function is called `vector` and takes in 4 parameters: `x_a`, `y_a`, `x_b`, `y_b`
     - It will then calculate the difference between `x_a` and `x_b` and hold it in a variable
     - It will also calculate the difference between `y_a` and `y_b` and hold it in a variable
     - Finally, it returns the two variables in a list
@@ -206,12 +206,12 @@
 
   *Case 1*:
   - *Inputs*: [3,2,4], k = 6
-  - *Outputs*: [1,2]
+  - *Outputs*: [1,2] or [2, 1]
   - *Explanation*: nums[1] + nums[2] == 6, we return [1,2] (or [2,1])
 
   *Case 2*:
   - *Inputs*: nums = [2,7,11,15], k = 9
-  - *Outputs*: [0, 1]
+  - *Outputs*: [0, 1] or [1, 0]
   - *Explanation*: Because nums[0] + nums[1] == 9, we return [0, 1]
 
   1. Write a multi-step strategy towards solving the problem.
@@ -361,7 +361,7 @@
           points_in_circle = 0
           r = 1
 
-          for i in range(n):
+          for i in range(amount_of_points):
               x_p = random.random()
               y_p = random.random()
 
@@ -379,7 +379,7 @@
     3. This algorithm has a time complexity of: $O(n)$: Because instructions increase linearly with input size. \
       And has a space complexity of: $O(1)$: Because the amount of data we are storing is not proportional and independent of the input size.
 
-    *Note*: We could of also solved this using a full circle with `randrange`.
+    *Note*: We could of also solved this using a full circle with `random.uniform`.
 ]
 
 #exercise(title: "Approximate an integral with monte carlo methods")[
@@ -400,7 +400,7 @@
   - *width*: $w = x_2 - x_1 = pi - 0 = pi$. \
   - *height*: $h = 1$ (since $0 <= sin(x) <= 1$)
 
-  The area of the rectangle would be $a_t = w * h = pi$.
+  The area of the rectangle would be $a_r = w * h = pi$.
 
   Now, let's generate $n$ amount of random points with random $x$ and $y$'s, and check if they are under(and in this case inside) the curve or not.
 
@@ -411,12 +411,12 @@
   Because the proportion of points inside the curve approximates the proportion of the curve's area relative to the rectangle's area. Then we can derive this formula:
   $
     "points in the curve" / "points in the rectangle" approx "area of the curve" / "area of the rectangle" \
-    "points in the curve" / "points in the rectangle" approx a_c / a_t
+    "points in the curve" / "points in the rectangle" approx a_c / a_r
   $
 
   And since we want the area of the curve ($a_c$):
 
-  $ a_c approx "points in the curve" / "points in the rectangle" * a_t $
+  $ a_c approx "points in the curve" / "points in the rectangle" * a_r $
 
   Here are the visuals: #link("https://www.desmos.com/calculator/um9twf3ven")
 
@@ -488,10 +488,10 @@
       And has a space complexity of: $O(1)$: Because the amount of data we are storing is not proportional and independent of the input size.
 ]
 
-#exercise(title: "Approximate the area of an ellipsoid using Monte Carlo Methods")[
+#exercise(title: "Approximate the volume of an ellipsoid using Monte Carlo Methods")[
   An ellipsoid is a 3-D shape which is the analogue of an ellipse.
 
-  - *Formula for an ellipsoid centered $(0,0)$*: $x^2/a^2 + y^2/b^2 + z^2/c^2 = 1$, where $a$ represents the x-stretch, $b$ the y-stretch, and $z$ the z-stretch. \
+  - *Formula for an ellipsoid centered $(0,0,0)$*: $x^2/a^2 + y^2/b^2 + z^2/c^2 = 1$, where $a$ represents the x-stretch, $b$ the y-stretch, and $c$ the z-stretch. \
   - *Point $P(x_p, y_p, z_p)$ inside an ellipsoid*: $x^2/a^2 + y^2/b^2 + z^2/c^2 <= 1$
   - *Point $P(x_p, y_p, z_p)$ outside an ellipsoid*: $x^2/a^2 + y^2/b^2 + z^2/c^2 > 1$
   - *Volume of a cuboid*: $a_c = "width" * "height" * "length"$, where $l$ is the length, $w$ is the width, and $h$ is the height.
@@ -508,9 +508,9 @@
 
   Since stretch is in both directions, we multiply every stretch factor by $2$.
 
-  This time we will not constrain our self with values from $0$ to $1$, since both the width and the height are $>= 1$.
+  This time we will not constrain our self with values from $0$ to $1$, and will simulate it fully.
 
-  Now let's figure out the area:
+  Now let's figure out the volume of the cuboid:
   $ a_c = w * h * l = 5 * 3 * 2 = 30 "units" $
 
   Let's now consider $a_e$ as the volume of the ellipsoid, and compute $a_e / a_c$:
@@ -554,12 +554,12 @@
   1. \
     - First we import the random library to get the random values.
     - Then we make the function that accepts the parameter $n$, the number of random points to be generated.
-    - We make an accumulator variable `points_in_ellipsoid`, that counts how many points are in the circle.
+    - We make an accumulator variable `points_in_ellipsoid`, that counts how many points are in the ellipsoid.
     - We will register variables for the x-stretch, y-stretch and z-stretch so that we can use them later in the formula.
     - We will then loop over `range(n)`.
     - For each loop, we will generate a random $x$, $y$, and $z$ value between $]-a, a[$, $]-b, b[$ and $]-c, c[$ respectively, using `random.uniform`.
-    - We will then apply the formula $x^2/a^2 + y^2/b^2 + z^2/c^2 <= 1$ to check if the point is inside the circle.
-    - If the point is inside the circle, we will increment the `points_in_ellipsoid` by $1$.
+    - We will then apply the formula $x^2/a^2 + y^2/b^2 + z^2/c^2 <= 1$ to check if the point is inside the ellipsoid.
+    - If the point is inside the ellipsoid, we will increment the `points_in_ellipsoid` by $1$.
     - Then, since the formula $30 * "points in ellipsoid" / "points in cuboid"$ is already given to us, we can just apply it and return the result.
   2.
 
@@ -585,7 +585,7 @@
         return (points_in_ellipsoid / n) * 30
     ```.text,
     lang: "python",
-  ),
+  )
   3. This algorithm has a time complexity of: $O(n)$: Because instructions increase linearly with input size. \
     And has a space complexity of: $O(1)$: Because the amount of data we are storing is not proportional and independent of the input size.
 ]
@@ -629,7 +629,7 @@
   - Then, we make the `solution` function, that accepts `number_of_points`, which is the number of random points to be generated.
   - Then, we make our accumulator variable `points_in_superellipse`.
   - Then we can define our constants $a$, $b$, and $n$.
-  - Then we can loop over `range(n)` and generate a random $x_p$ and $y_p$ each time.
+  - Then we can loop over `range(number_of_points)` and generate a random $x_p$ and $y_p$ each time.
   - Then we can compute the formula  $|x/a|^n + |y/b|^n <= 1$, for each point.
   - If the point is inside the superellipse, then we can increment the accumulator, otherwise do nothing.
   - In the end, we can return our derived formula $"points in the superellipse" / "points in the rectangle" * 8$.

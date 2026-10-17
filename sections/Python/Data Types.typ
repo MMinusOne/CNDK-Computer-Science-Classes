@@ -22,7 +22,6 @@
   [#raw("list", lang: "python")],
   [Sequence of elements. Example: `[10, 5.2, 9.8]`
     \ Lists are heterogeneous and 0-indexed
-    \ List indexing is non-commutative
   ],
 
   [#raw("dict", lang: "python")],

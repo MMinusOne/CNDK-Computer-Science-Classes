@@ -1,11 +1,3 @@
-\
-\
-\
-\
-\
-\
-\
-
 = Python
 
 #include "Introduction.typ"

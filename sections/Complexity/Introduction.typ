@@ -85,7 +85,7 @@ $f(n)$ is $O(g(n))$ if there exists a $c > 0$ and an $n_0 > 0$, such that $f(n) 
 ==== Explanation
 
 Big-O describes the "upper-bound" of time an algorithm can take.
-Therefore, Big-O is always at most $c * g(n)$ for all $n >= n_0$.
+Therefore, Big-O has $f(n)$ always at most $c * g(n)$ for all $n >= n_0$.
 
 There exists other complexity-notations:
 
@@ -166,7 +166,7 @@ $ x^2 in O(200x^2) $
 We will only be responsible for *Big-O* in this course.
 
 *A tip:* You can look at the highest degree of the function, and already be aware of what time complexity it is .
-
+#pagebreak()
 === Ways of proving f(n) = O(g(n))
 
 
@@ -228,6 +228,8 @@ We will only be responsible for *Big-O* in this course.
   ],
 )
 
+#pagebreak()
+
 === Why is knowing the time complexity of an algorithm important?
 
 Let's imagine a sorted array $A$ like we did before, and let's say that array has a length of $N = 10^9$ (1 billion elements).
@@ -237,7 +239,7 @@ Using *sequential search* $O(n)$, would mean an upper-bound of $"operations" = o
 #table(
   columns: 2,
   align: (center, center, center, center),
-  inset: 12pt,
+  inset: 6pt,
   fill: (x, y) => tableStripes(x, y),
 
   [#text(white, weight: "bold")[

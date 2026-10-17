@@ -130,13 +130,13 @@
   [Used to check if a certain key is inside a dictionary, returns a bool],
   [
     ```python "name" in {"name": "John"}``` $->$  `True`\ because key "name" exists in the dict \
-    ```python "age" in {"name": "John"}``` $->$  `False`\ because key "age" does not exists in the dict
+    ```python "age" in {"name": "John"}``` $->$  `False`\ because key "age" does not exist in the dict
   ],
 
   [#text(size: 14pt, weight: "bold")[`not in`]],
   [Used to check if a certain key is not inside a dictionary, returns a bool],
   [ ```python "name" not in {"name": "John"}``` $->$  `False`\ because key "name" exists in the dict \
-    ```python "age" not in {"name": "John"}``` $->$  `True`\ because key "age" does not exists in the dict],
+    ```python "age" not in {"name": "John"}``` $->$  `True`\ because key "age" does not exist in the dict],
 )
 
 #v(1em)
@@ -158,7 +158,7 @@ Example:
   - And left shift by 2: `(10100)` (We added two zeroes.)
   - Now if we convert back to base-10, the number becomes: $2^2 + 2^4 = 20$.
 ]
-- 10 .) Right-bitshift (`>>`): The inverse of left-bitshift.
+- 10 .) Right-bitshift (`>>`): The opposite procedure of left-bitshift.
 
 #grid(
   columns: 2,

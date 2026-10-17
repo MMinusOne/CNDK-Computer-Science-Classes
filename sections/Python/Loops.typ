@@ -1,5 +1,5 @@
 #import "../../templates.typ": *
-\ \ \ \
+
 == Loops <Loops>
 
 Loops are used for repeated actions.

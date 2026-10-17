@@ -32,7 +32,7 @@
   #v(3cm)
   #text(size: 32pt, weight: "bold", fill: primary_color)[Computer Science]
   #v(0.5cm)
-  #text(size: 20pt, fill: secondary_color)[Instructor's Note]
+  #text(size: 20pt, fill: secondary_color)[Instructor's Edition]
 ]
 
 #pagebreak()
@@ -43,26 +43,58 @@
 
 = Instructor's Guide
 
-This is a Computer Science course that can be given in any level in highschool, be it grade 10, grade 11, or grade 12. And will probably be the first time these students will be exposed to Computer Science. Here are a few things to keep in mind when serving this course:
+== Who this course is for
 
-1) You can and should be somewhat selective about what you want to serve, especially in the freshmen classes, the first time this course material was served for an S2S class, time complexity and logic gates were fully omitted, and pure functions wasn't talked about, and bitshift operations were not required for tests, as well as many other things.
+This is a first course in computer science for students in grades 10-12. It assumes no prior exposure and only basic algebra and some calculus, the material is deliberately simplified in places (The CPU is just an ALU and a CU, "interpreted" as line-by-line execution). Refine these when your class is ready.
 
-2) Be aware that some classes might need smaller side-notes and introductions to some particular concepts, may it be logarithms, function growth, inequality, or such.
+== What is inside
 
-3) Regarding exercises, the first time the course was served, many, many exercises were omitted, all of the Monte Carlo exercises were never really served, however, it is probably of interest to try and serve those to SG classes.
+Part 2 covers computer architecture, number systems, logic gates. Part 3 covers Python fundementals. Part 4 covers complexity theory. Part 5 is a short unit on caching.
 
-4) Regarding exams, I recommend starting really slow, maybe a quiz with multiple choice about computer architecture definitions, and don't include logic gates right off the bat, then make them slowly more complicated, but always include definition questions so that there are attainable questions in case a student fails all other questions, also, during the first time I served this course, I always included a bonus question, so theoretically, students can get more than 20/20 on an exam, but that was obviously never counted, it just made up for lost grades.
+After those come the exercises, sample exam.
 
-All the material is available at #link("https://github.com/MMinusOne/CNDK-Computer-Science-Classes"), and will be for the far future, modification of this PDF is suggested based on what the instructor feels like should be in the course.
+#table(
+  columns: (1fr, 1fr),
+  inset: 10pt,
+  fill: (x, y) => tableStripes(x, y),
+  stroke: 1pt + secondary_color,
+  align: (left, left),
 
-The sourcecode is in Typst, a relatively new markup language(alternative to LaTeX), so it might take a while and some getting used to before changing anything, however the Typst documentation is clear and available at #link("https://typst.app/docs/")
+  [#text(fill: white, weight: "bold")[Core]],
+  [#text(fill: white, weight: "bold")[Optional (stronger classes or extra time)]],
+
+  [CPU, ALU, CU, memory types, and units], [Logic gates],
+  [Binary and Decimal], [Bitshift operations],
+  [Python types, operators, loops, functions, control flow], [Pure functions, deterministic functions],
+  [], [Complexity Theory and Big-O],
+  [], [Caching],
+  [], [Monte Carlo Exercises],
+)
+
+In my first run with a beginner class, I left out complexity, logic gates, caching, entirely, the rest in the optional category was not examined.
+
+== Before you assign exercises
+
+Some exercisews rely on Python the notes don't  introduce: building and updating dictionaries, `len()`, and importing `random` and `math`. Teach these first.
+Complexity Theory also benifts from an introduction to logarithms, inequalities, and how functions grow.
+
+== Assesment
+
+*Start slow*: Open with easy muiltiple-choice quiz on architecture, definitions, and hold logic gates until later, you can also make text-comprehension of computer-science books and blogs, include few open-ended questions.
+*Add difficulty gradually*: move through code reading, short calculations, and proofs.
+*Always include definition questions*: so every student has attainable marks.
+*Bonus question*: include a few per test to recover lost marks, final grade is capped at 20/20.
+
+== Using and adapting this book
+
+The source and all PDFs live at #link("https://github.com/MMinusOne/CNDK-Computer-Science-Classes"), the source is written in Typst, and its documentation is at #link("https://typst.app/docs/"). Expect a short learning curve before editing, and adjust the content to your course.
 
 #pagebreak()
 
 #include "sections/Computer Architecture/main.typ"
 #include "sections/Python/main.typ"
 #include "sections/Complexity/main.typ"
-// #include "sections/Miscellaneous/main.typ"
+#include "sections/Miscellaneous/main.typ"
 
 \ \ \ \ \ \ \
 
@@ -93,9 +125,3 @@ The sourcecode is in Typst, a relatively new markup language(alternative to LaTe
 
 #include "exams/Computer Science Exam 2.typ"
 
-#text()[
-  Good Luck! I want good grades.
-]
-#align(right)[
-  #text()[Author: Michael Salloum]
-]

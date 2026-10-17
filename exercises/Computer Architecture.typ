@@ -54,6 +54,6 @@
     $2^0 + 2^1 + 2^4 = 19$
   3. $2^0 + 2^1 + 2^3 + 2^4 + 2^6 + 2^7 + 2^9 + 2^10 = 1755$
   4. $(1502)_10 = (10111011110)_2$
-  5. $(1103)_2 = (10001001111)_10$, and since the base-2 version has 11 bits, it will require 11 bits to store.
+  5. $(1103)_10 = (10001001111)_2$, and since the base-2 version has 11 bits, it will require 11 bits to store.
 ]
 

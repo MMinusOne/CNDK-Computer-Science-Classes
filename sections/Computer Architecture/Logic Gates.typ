@@ -69,9 +69,6 @@ From these we can build the derived gates: NAND, NOR, XOR. NAND and NOR are also
   )
 ]
 
-==== De Morgan's Law
-
-$X = not(A and B) equiv not A or not B$
 
 === NOT
 
@@ -136,6 +133,10 @@ $X = not(A and B) equiv not A or not B$
     #pad(left: 2cm)[#figure(caption: "NAND")[#gate-svg("NAND")] <NAND>]
   ],
 )
+
+==== De Morgan's Law
+
+$X = not(A and B) equiv not A or not B$
 
 === OR
 
@@ -206,4 +207,7 @@ $X = not(A or B) equiv not A and not B$
   ],
 )
 
+#figure(caption: "Image of a 4-bit Computer built with logic-gates")[
+  #image("/assets/notes/4-bit-computer-circuit-diagram-scaled.jpg")]
 
+#pagebreak()
