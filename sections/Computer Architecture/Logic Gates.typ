@@ -92,6 +92,8 @@ From these we can build the derived gates: NAND, NOR, XOR. NAND and NOR are also
   ],
 )
 
+- *Double Negation:* $not (not A) equiv A$
+
 === AND
 
 #grid(
@@ -104,9 +106,11 @@ From these we can build the derived gates: NAND, NOR, XOR. NAND and NOR are also
       ((0, 0, 0), (0, 1, 0), (1, 0, 0), (1, 1, 1)),
     )
 
-    - The *AND* gate outputs 0 for all pairs of (A, B), except when both *A* AND *B* are 1.
+    - The *AND* gate outputs 0 for all pairs of ($I_1$, $I_2$), except when both *A* AND *B* are 1.
 
     - We will denote the operation: $A and B = O_1$
+
+    - *Contradiction:* $I_1 and not I_1 = 0$
   ],
   grid.cell()[
     #pad(left: 2cm)[#figure(caption: "AND")[#gate-svg("AND")] <AND>]
@@ -125,7 +129,7 @@ From these we can build the derived gates: NAND, NOR, XOR. NAND and NOR are also
       ((0, 0, 1), (0, 1, 1), (1, 0, 1), (1, 1, 0)),
     )
 
-    - The *NAND* gate outputs the opposite of what an AND gate would produce for a pair (A, B).
+    - The *NAND* gate outputs the opposite of what an AND gate would produce for a pair ($I_1$, $I_2$).
 
     - We will denote the operation: $not (A and B) = O_1$
   ],
@@ -136,7 +140,7 @@ From these we can build the derived gates: NAND, NOR, XOR. NAND and NOR are also
 
 ==== De Morgan's Law
 
-$X = not(A and B) equiv not A or not B$
+$not(A and B) equiv not A or not B$
 
 === OR
 
@@ -150,9 +154,11 @@ $X = not(A and B) equiv not A or not B$
       ((0, 0, 0), (0, 1, 1), (1, 0, 1), (1, 1, 1)),
     )
 
-    - The *OR* gate outputs 1 if *A* OR *B* (or both) is 1, and 0 only when both are 0.
+    - The *OR* gate outputs 1 if *$I_1$* OR *$I_2$* (or both) is 1, and 0 only when both are 0.
 
     - We will denote the operation: $A or B = O_1$
+
+    *Tautology:* $I_1 or not I_1 equiv 1$
   ],
   grid.cell()[
     #pad(left: 2cm)[#figure(caption: "OR")[#gate-svg("OR")] <OR>]
@@ -173,7 +179,7 @@ $X = not(A and B) equiv not A or not B$
       ((0, 0, 1), (0, 1, 0), (1, 0, 0), (1, 1, 0)),
     )
 
-    - The *NOR* gate outputs the opposite of what an OR gate would produce for a pair (A, B), meaning it outputs 1 only when both *A* and *B* are 0.
+    - The *NOR* gate outputs the opposite of what an OR gate would produce for a pair ($I_1$, $I_2$), meaning it outputs 1 only when both *A* and *B* are 0.
 
     - We will denote the operation: $not (A or B) = O_1$
   ],
@@ -184,7 +190,7 @@ $X = not(A and B) equiv not A or not B$
 
 ==== De Morgan's Law
 
-$X = not(A or B) equiv not A and not B$
+$not(A or B) equiv not A and not B$
 
 === XOR
 
