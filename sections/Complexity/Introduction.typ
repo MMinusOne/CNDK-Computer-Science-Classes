@@ -167,7 +167,133 @@ We will only be responsible for *Big-O* in this course.
 
 *A tip:* You can look at the highest degree of the function, and already be aware of what time complexity it is .
 #pagebreak()
-=== Ways of proving f(n) = O(g(n))
+
+=== Ways of analyzing an algorithm and determine $f(n)$
+
+==== Pre-requisites
+
+#block(
+  fill: rgb("eef2f5"),
+  inset: 12pt,
+  radius: 4pt,
+  stroke: (left: 4pt + rgb("4a90e2")),
+  width: 100%,
+)[
+  - $floor.l 5,8 floor.r = "lowest integer below 5,8" = 5$
+
+  - $log_b c = a$:
+  $ b^a = c $
+
+  *example:* $log_2 8 = 3$
+  $ 2^3 = 8 $
+
+  The log of base $b$ and input $c$ yields what exponent we need for $b$ to equal $c$
+
+  - $ log_b (b^x) = x $
+
+  - $ log(a / b) = log a - log b $
+  #pad(y: 1em)[
+    - $ log_(b_1) c = (log_(b_2) c) / (log_(b_2) b_1) = (1/(log_(b_2) b_1)) log_(b_2) c $
+  ]
+
+  - $ sum_(i=1)^k c = c * k $
+  - $ sum_(i=1)^k i = 1 + 2 + 3 + dots + k = k(k+1)/2 $
+  - $ sum_(i=1)^(n) (n - i) = (n - 1) + (n - 2) + (n - 3) + dots + 1 + 0 = k(k-1)/2 $
+  *Proof*: $ S = 1 + 2 + dots + (n-2) + (n-1) $
+  $ S = (n - 1) + (n - 2) + dots + 2 + 1 $
+
+  Add $S$ and the flipped $S$ together, there is going to be $n - 1$ terms in total:
+
+  $ 2S = underbracket(n + n + n + dots + n, n-1 "terms from 1 to n") $
+
+  Factor out $n-1$
+
+  $ 2S = n(n-1) $
+
+  $ S = n(n-1)/2 $
+
+  - $ sum_(i=1)^k n/2^i = n/1 + n/2 + n/4 + n/8 + dots + n/2^k $
+]
+
+#pagebreak()
+
+==== Analysis
+
+*First concept:* In time complexity Big-O notation, we ignore constant factors and lower order terms:
+
+
+$O(2n) = O(n)$, 2 is a constant factors \
+$O(3n^2) = O(n^2)$ 3 is a constant factors\
+$O(3n^2 + n) = O(n^2)$ We ignore constant factors and lower order terms \
+$O(log_2 n) = O(log n)$ Any logarithm base change differs by a constant factor(see pre-requisites) \
+$O(5) = O(1)$
+
+*Example algorithm 1:* Algorithm $1$ takes an input $N$, and will give me back that input $N$ as it is, no matter the $N$, the algorithm will take $"number of steps" = 1$
+
+It is therefore $O(1)$
+
+*Example algorithm 2:* Algorithm $2$ takes an array $L$ of length $N$ and will sum the elements of the array together, so for example, for $L = [1,5,2,4,6,1]$, $"output" = 1 + 5 + 2 + 4 + 6 + 1 = 19$, it took 6 steps (length of array is $N = 6$) \
+
+The number of steps this algorithm will take is: $"steps" = N$, exactly $N$ steps, each step consists of adding the number at $L_k$ to a accumulation variable $S$, so the amount of work at each step is $1$, $O(1)$, $S "+=" L_k$
+
+The amounts of steps are:
+
+$ sum_(i = 1)^(N) 1 = N * 1 = N $
+
+It is therefore $O(N)$, $N$ steps
+
+*Note:* The $1$ here represents the amount of work at each iteration (adding to the accumulation), which is just one step.
+
+#pagebreak()
+
+*Example algorithm 3:* Algorithm $3$ takes a list $L$ of length $N$, and tries to find the position of two elements $(i, j)$, $i < j$ such that: $L[i] + L[j] = K$, where $K$ is a target sum given.
+
+It will do that in the following way:
+
+- Go over each element in the list, at position $i$
+- At position $i$, check all the elements infront of $i$, that have index $j$, and check if $L[i] + L[j] = K$
+- If not, go to the next $i$
+
+For example, if $K = 10$ and $L = [2, 5, 0, 3, 5]$
+
+- *Starting at $i = 0$: *, We will check all elements that have position $j >= i + 1 = 1$, but no elements would be found, because there exists no elements in this list such that $L[0] = 2$ adds with another number $L[j]$ such that $2 + L[j] = 10$
+- *Trying $i = 1$: *, we would have $L[1] = 5$, then check all elements that have position $j >= i + 1 = 2$, you would find that $L[1] + L[4] = 5 + 5 = 10 = K$, so we found it, if we didnt end up finding it, then we would try $i = 2$
+
+The steps taken by the algorithm at the worst case are:
+
+$ sum_(i=0)^(N-1) (N - 1- i) = (N - 1) + (N - 2) + dots + 1 + 0 = N(N-1)/2 = (N^2 - N)/2 $
+
+It is therefore $O((N^2 - N) / 2)$, ignoring constant factors:
+$O(N^2)$
+
+*Note:* It is the sum of $(N - 1- n)$ steps because at each step $i$, we will end up doing $N - 1 - i$ steps, which is the length of the elements after $i$, when we took $i = 0$ for example, we ended up checking all $j >= 1$, which was $N-1$ elements, or with $i = 1$, we checked all $j >= 2$, which was $N-2$ elements.
+
+
+*Example algorithm 4:* This algorithm will be #ref(<Binary-Search-Diagram>, supplement: "Binary Search"), we stated that at each iteration, the number of elements in binary search is cut by half, meaning that at step $k$, $"elements" = N/2^k$, where $N$ is the length of the array.
+
+*Visualization:* If we start with an array of length 12, after two iterations, cutting the array by half twice, there will be $12/2^2 = 3 "elements"$
+
+Since k is the number of steps, and we want to know the number of steps, and we also know that the algorithm stops when there is *1* last element:
+
+$ "elements left" = 1 $
+$ N/2^k = 1 $
+$ N = 2^k $
+$ log_2(N) = log_2(2^k) $
+$ log_2(N) = k $
+$ "steps" = k = log_2(N) $
+
+
+
+It is therefore $O(log_2 N)$, ignoring constant factor and lowest-order term:
+
+$O(log N)$
+
+*Extra note:* log_2 N is only an integer when N is a power of 2. So the exact worst case scenario steps comes down to: $"steps" = floor.l log_2 N floor.r + 1$
+
+#pagebreak()
+
+
+=== Ways of proving $f(n) = O(g(n))$
 
 
 
